@@ -2,10 +2,19 @@
     Created on : Sep 26, 2015, 4:20:47 PM
     Author     : Theriault
 */
+h1, h2, h3, h4, h5, h6 {
+    font-family: sans-serif;
+}
+
 body {
+    font-family: sans-serif;
     width: 100%;
     height: auto;
     background: none;
+}
+
+p {
+    font-family: serif;
 }
 
 #container {
@@ -21,7 +30,7 @@ body {
 
 #header {
     width: 100%;
-    height: 85px;
+    height: auto;
 }
 #headLogo {
     display: inline-block;
@@ -36,15 +45,54 @@ body {
     width: 55px;
     height: 55px;
 }
+#headerBox {
+    display: table;
+    width: calc(100% - 90px);
+    float: left;
+    height: 55px;
+    margin: 5px;
+    margin-left: 0;
+    background-color: rgba(100,200,255,.2);
+    padding: 5px;
+    position: relative;
+}
 #headTitle {
-    display: inline-table;
+    display: table-cell;
     float: right;
     font-family: sans-serif;
-    vertical-align: middle;
     color: green;
-    padding-left: 20px;
-    padding-right: 20px;
-    height: 65px;
-    margin: 5px;
-    background-color: rgba(100,200,255,.2);
+    overflow: hidden;
+    font-size: 2em;
+    position: absolute;
+    top: calc(45px - 1em);
+    right: 20px;
+}
+#mainContain {
+    height: 440px;
+    position: relative;
+    float: left;
+    width: 100%;
+}
+
+#mainBox {
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: rgba(200,200,150,.5);
+    width: calc(45% - 50px);
+    height: 100%;
+    float: left;
+    padding: 20px;
+}
+#mainBox2 {
+    margin-left: 0;
+    margin-right: 5px;
+    background-color: lightgreen;
+    width: calc(55% - 45px);
+    height: 100%;
+    float: left;
+    padding: 20px;
+}
+
+.list0 li {
+    line-height: 1.5em;
 }

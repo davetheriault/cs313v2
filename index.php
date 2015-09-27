@@ -13,25 +13,29 @@
                 <div id="headLogo">
                     <img src="images/dave_theriault_logo.png" alt="Dave Theriault Logo">
                 </div>
-                <div id="headTitle"><h1>David Theriault's CS313 Site</h1></div>
+                <div id="headerBox"><div id="headTitle">David Theriault's CS313 Site</div></div>
             </div>
-            <h1>CS313 Assignments</h1>
+            <div id="mainContain">
+            <div id="mainBox">
+                <h1>CS313 Assignments</h1>
             
-            <ol>
-                <li>Week 3</li>
-                <li>Week 4</li>
-                <li>Week 5</li>
-                <li>Week 6</li>
-                <li>Week 7</li>
-                <li>Week 8</li>
-                <li>Week 9</li>
-                <li>Week 10</li>
-                <li>Week 11</li>
-                <li>Week 12</li>
-                <li>Week 13</li>
-                <li>Week 14</li>
-            </ol>
-            
+                <ul class="list0">
+                    <li><a href="">Week 3</a></li>
+                    <li><a href="">Week 4</a></li>
+                    <li><a href="">Week 5</a></li>
+                    <li><a href="">Week 6</a></li>
+                    <li><a href="">Week 7</a></li>
+                    <li><a href="">Week 8</a></li>
+                    <li><a href="">Week 9</a></li>
+                    <li><a href="">Week 10</a></li>
+                    <li><a href="">Week 11</a></li>
+                    <li><a href="">Week 12</a></li>
+                    <li><a href="">Week 13</a></li>
+                    <li><a href="">Week 14</a></li>
+                </ul>
+            </div>  
+            <div id="mainBox2"></div>
+            </div>
         </div>
     </body>
 </html>
