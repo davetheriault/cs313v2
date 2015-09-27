@@ -21,20 +21,28 @@ body {
 
 #header {
     width: 100%;
-    height: 75px;
+    height: 85px;
 }
-
-#headLogo img {
+#headLogo {
     display: inline-block;
     float: left;
     width: 55px;
-    height: auto;
-    padding: 10px;
+    height: 55px;
+    padding: 10px; 
+    margin: 5px;
+    background-color: rgba(100,200,255,.5);
+}
+#headLogo img {
+    width: 55px;
+    height: 55px;
 }
 #headTitle {
     display: inline-table;
-    float: left;
+    float: right;
     font-family: sans-serif;
     vertical-align: middle;
     color: green;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 75px;
 }
