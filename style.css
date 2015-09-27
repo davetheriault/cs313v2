@@ -26,11 +26,13 @@ body {
 
 #headLogo img {
     display: inline-block;
+    float: left;
     width: 80px;
     height: auto;
     padding: 10px;
 }
 #headTitle {
     display: inline-block;
+    float: left;
     font-family: sans-serif;
 }
