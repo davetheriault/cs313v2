@@ -12,7 +12,20 @@ body {
     width: calc(100% - 40px);
     height: calc(100% - 40px);
     max-width: 1000px;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
     background-color: rgba(250,250,250,.9);
     padding: 20px;
+}
+
+#header {
+    width: 100%;
+    height: 100px;
+}
+
+#headLogo img {
+    width: 80px;
+    height: auto;
 }
