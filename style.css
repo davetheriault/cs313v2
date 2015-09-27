@@ -28,7 +28,7 @@ body {
     float: left;
     width: 55px;
     height: 55px;
-    padding: 10px; 
+    padding: 5px; 
     margin: 5px;
     background-color: rgba(100,200,255,.5);
 }
@@ -44,5 +44,6 @@ body {
     color: green;
     padding-left: 20px;
     padding-right: 20px;
-    height: 75px;
+    height: 65px;
+    margin: 5px;
 }
