@@ -32,7 +32,8 @@ body {
     padding: 10px;
 }
 #headTitle {
-    display: inline-block;
+    display: inline-table;
     float: left;
     font-family: sans-serif;
+    vertical-align: middle;
 }
