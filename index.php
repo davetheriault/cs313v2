@@ -8,7 +8,13 @@
     </head>
     <body>
         <div id="container">
+            
+            <div id="header">
+                <div id="headTitle"><h1>David Theriault's CS313 Site</h1></div>
+            </div>
+            <img src="images/dave_theriault_logo.png" alt="Dave Theriault Logo">
             <h1>CS313 Assignments</h1>
+            
             <ol>
                 <li>Week 3</li>
                 <li>Week 4</li>
