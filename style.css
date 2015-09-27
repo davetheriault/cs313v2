@@ -9,15 +9,14 @@ body {
 }
 
 #container {
-    width: calc(100% - 40px);
-    height: calc(100% - 40px);
+    width: 100%;
+    height: 100%;
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
     margin-bottom: 0;
     background-color: rgba(250,250,250,.9);
-    padding: 20px;
 }
 
 #header {
@@ -26,6 +25,12 @@ body {
 }
 
 #headLogo img {
+    display: inline-block;
     width: 80px;
     height: auto;
+    padding: 10px;
+}
+#headTitle {
+    display: inline-block;
+    font-family: sans-serif;
 }
