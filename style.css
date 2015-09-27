@@ -2,6 +2,10 @@
     Created on : Sep 26, 2015, 4:20:47 PM
     Author     : Theriault
 */
+body {
+    width: 100%;
+    height: auto;
+}
 
 #container {
     max-width: 1000px;
