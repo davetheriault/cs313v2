@@ -95,9 +95,9 @@ $lessAvg = round(($numless / $spendSum * 100), 2);
                     <?php echo "<li class=\"bar3\" style=\"width: " . $_700Avg*5 . "px;\">$700_$1000<br>" . $_700Avg . "%</li>"; ?>
                     <?php echo "<li class=\"bar4\" style=\"width: " . $moreAvg*5 . "px;\">&gt;$1000<br>" . $moreAvg . "%</li>"; ?>
                 </ul>
-            
+            <br><br><br>
         </div>
         </div>
-        <br><br><br>
+        
     </body>
 </html>

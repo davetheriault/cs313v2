@@ -26,7 +26,9 @@
                     <li><a href="">Week 14</a></li>
                 </ul>
             </div>  
-            <div id="mainBox2"></div>
+                <div id="mainBox2">
+                    <a href="endsession.php">Week 0</a>
+                </div>
             </div>
         </div>
     </body>
