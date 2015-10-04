@@ -27,7 +27,7 @@
                     
                     Visited: <br><?php foreach($_POST['places'] as $selected){
                         echo $selected . "</br>"; } ?><br><br>
-                      Visited: <br><?php echo $_POST['places']; ?><br><br>
+                    
                     Comments: <br>
                     <?php echo $_POST['comments']; ?>
                     
