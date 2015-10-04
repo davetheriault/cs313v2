@@ -93,7 +93,7 @@ $lessAvg = round(($numless / $spendSum * 100), 2);
                     <?php echo "<li class=\"_4bar\" style=\"width: " . $oledAvg*5 . "px;\">OLED<br>" . $oledAvg . "%</li>"; ?>
                 </ul>
             
-                <h2>Favorite Villain:</h2><br><?php echo $featSum . ' total votes'; ?> <br>
+                <h2>Best Feature:</h2><br><?php echo $featSum . ' total votes'; ?> <br>
                 <ul class="barGraph">
                     <?php echo "<li class=\"_1bar\" style=\"width: " . $_3dAvg*5 . "px;\">3D TV<br>" . $_3dAvg . "%</li>"; ?>
                     <?php echo "<li class=\"_2bar\" style=\"width: " . $wifiAvg*5 . "px;\">WiFi<br>" . $wifiAvg . "%</li>"; ?>
@@ -101,7 +101,7 @@ $lessAvg = round(($numless / $spendSum * 100), 2);
                     <?php echo "<li class=\"_4bar\" style=\"width: " . $savAvg*5 . "px;\">Smell_a_Vision<br>" . $savAvg . "%</li>"; ?>
                 </ul>
             
-                <h2>Favorite Movie:</h2><br><?php echo $spendSum . ' total votes'; ?> <br>
+                <h2>Price:</h2><br><?php echo $spendSum . ' total votes'; ?> <br>
                 <ul class="barGraph">
                     <?php echo "<li class=\"_1bar\" style=\"width: " . $lessAvg*5 . "px;\">&lt;$400<br>" . $lessAvg . "%</li>"; ?>
                     <?php echo "<li class=\"_2bar\" style=\"width: " . $_400Avg*5 . "px;\">$400_$700<br>" . $_400Avg . "%</li>"; ?>
