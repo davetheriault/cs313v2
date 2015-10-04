@@ -104,7 +104,6 @@ p {
     }
     
 .barGraph li {
-    background-color: transparent;
     border: 1px solid #555;
     border-left: none;
     position: relative;
@@ -115,8 +114,8 @@ p {
     padding: 5px;
     }
     
-._1bar { background-color: #8671FD; }
-._2bar { background-color: #CD65FA; }
-._3bar { background-color: #FA6565; }
-._4bar { background-color: #FAAD65; }
+.barGraph li.bar1 { background-color: #8671FD; }
+.barGraph li.bar2 { background-color: #CD65FA; }
+.barGraph li.bar3 { background-color: #FA6565; }
+.barGraph li.bar4 { background-color: #FAAD65; }
  

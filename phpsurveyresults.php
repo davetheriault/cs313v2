@@ -79,34 +79,34 @@ $lessAvg = round(($numless / $spendSum * 100), 2);
             
                 <h2>Best Brand:</h2><br><?php echo $brandsum . ' total votes'; ?><br>
                 <ul class="barGraph">
-                    <?php echo "<li class=\"_1bar\" style=\"width: " . $sonyAvg*5 . "px;\">Sony<br>" . $sonyAvg . "%</li>"; ?>
-                    <?php echo "<li class=\"_2bar\" style=\"width: " . $samsAvg*5 . "px;\">Samsung<br>" . $samsAvg . "%</li>"; ?>
-                    <?php echo "<li class=\"_3bar\" style=\"width: " . $viziAvg*5 . "px;\">Vizio<br>" . $viziAvg . "%</li>"; ?>
-                    <?php echo "<li class=\"_4bar\" style=\"width: " . $panaAvg*5 . "px;\">Panasonic<br>" . $panaAvg . "%</li>"; ?>
+                    <?php echo "<li class=\"bar1\" style=\"width: " . $sonyAvg*5 . "px;\">Sony<br>" . $sonyAvg . "%</li>"; ?>
+                    <?php echo "<li class=\"bar2\" style=\"width: " . $samsAvg*5 . "px;\">Samsung<br>" . $samsAvg . "%</li>"; ?>
+                    <?php echo "<li class=\"bar3\" style=\"width: " . $viziAvg*5 . "px;\">Vizio<br>" . $viziAvg . "%</li>"; ?>
+                    <?php echo "<li class=\"bar4\" style=\"width: " . $panaAvg*5 . "px;\">Panasonic<br>" . $panaAvg . "%</li>"; ?>
                 </ul>
             
                 <h2>Best Type:</h2><br><?php echo $typeSum . ' total votes'; ?> <br>
                 <ul class="barGraph">
-                    <?php echo "<li class=\"_1bar\" style=\"width: " . $plasAvg*5 . "px;\">Plasma<br>" . $plasAvg . "%</li>"; ?>
-                    <?php echo "<li class=\"_2bar\" style=\"width: " . $lcdAvg*5 . "px;\">LCD<br>" . $lcdAvg . "%</li>"; ?>
-                    <?php echo "<li class=\"_3bar\" style=\"width: " . $ledAvg*5 . "px;\">LED<br>" . $ledAvg . "%</li>"; ?>
-                    <?php echo "<li class=\"_4bar\" style=\"width: " . $oledAvg*5 . "px;\">OLED<br>" . $oledAvg . "%</li>"; ?>
+                    <?php echo "<li class=\"bar1\" style=\"width: " . $plasAvg*5 . "px;\">Plasma<br>" . $plasAvg . "%</li>"; ?>
+                    <?php echo "<li class=\"bar2\" style=\"width: " . $lcdAvg*5 . "px;\">LCD<br>" . $lcdAvg . "%</li>"; ?>
+                    <?php echo "<li class=\"bar3\" style=\"width: " . $ledAvg*5 . "px;\">LED<br>" . $ledAvg . "%</li>"; ?>
+                    <?php echo "<li class=\"bar4\" style=\"width: " . $oledAvg*5 . "px;\">OLED<br>" . $oledAvg . "%</li>"; ?>
                 </ul>
             
                 <h2>Best Feature:</h2><br><?php echo $featSum . ' total votes'; ?> <br>
                 <ul class="barGraph">
-                    <?php echo "<li class=\"_1bar\" style=\"width: " . $_3dAvg*5 . "px;\">3D TV<br>" . $_3dAvg . "%</li>"; ?>
-                    <?php echo "<li class=\"_2bar\" style=\"width: " . $wifiAvg*5 . "px;\">WiFi<br>" . $wifiAvg . "%</li>"; ?>
-                    <?php echo "<li class=\"_3bar\" style=\"width: " . $curvAvg*5 . "px;\">Curved_TV<br>" . $curvAvg . "%</li>"; ?>
-                    <?php echo "<li class=\"_4bar\" style=\"width: " . $savAvg*5 . "px;\">Smell_a_Vision<br>" . $savAvg . "%</li>"; ?>
+                    <?php echo "<li class=\"bar1\" style=\"width: " . $_3dAvg*5 . "px;\">3D TV<br>" . $_3dAvg . "%</li>"; ?>
+                    <?php echo "<li class=\"bar2\" style=\"width: " . $wifiAvg*5 . "px;\">WiFi<br>" . $wifiAvg . "%</li>"; ?>
+                    <?php echo "<li class=\"bar3\" style=\"width: " . $curvAvg*5 . "px;\">Curved_TV<br>" . $curvAvg . "%</li>"; ?>
+                    <?php echo "<li class=\"bar4\" style=\"width: " . $savAvg*5 . "px;\">Smell_a_Vision<br>" . $savAvg . "%</li>"; ?>
                 </ul>
             
                 <h2>Price:</h2><br><?php echo $spendSum . ' total votes'; ?> <br>
                 <ul class="barGraph">
-                    <?php echo "<li class=\"_1bar\" style=\"width: " . $lessAvg*5 . "px;\">&lt;$400<br>" . $lessAvg . "%</li>"; ?>
-                    <?php echo "<li class=\"_2bar\" style=\"width: " . $_400Avg*5 . "px;\">$400_$700<br>" . $_400Avg . "%</li>"; ?>
-                    <?php echo "<li class=\"_3bar\" style=\"width: " . $_700Avg*5 . "px;\">$700_$1000<br>" . $_700Avg . "%</li>"; ?>
-                    <?php echo "<li class=\"_4bar\" style=\"width: " . $moreAvg*5 . "px;\">&mt;$1000<br>" . $moreAvg . "%</li>"; ?>
+                    <?php echo "<li class=\"bar1\" style=\"width: " . $lessAvg*5 . "px;\">&lt;$400<br>" . $lessAvg . "%</li>"; ?>
+                    <?php echo "<li class=\"bar2\" style=\"width: " . $_400Avg*5 . "px;\">$400_$700<br>" . $_400Avg . "%</li>"; ?>
+                    <?php echo "<li class=\"bar3\" style=\"width: " . $_700Avg*5 . "px;\">$700_$1000<br>" . $_700Avg . "%</li>"; ?>
+                    <?php echo "<li class=\"bar4\" style=\"width: " . $moreAvg*5 . "px;\">&mt;$1000<br>" . $moreAvg . "%</li>"; ?>
                 </ul>
             
         </div>
