@@ -98,6 +98,6 @@ $lessAvg = round(($numless / $spendSum * 100), 2);
             
         </div>
         </div>
-        
+        <br><br><br>
     </body>
 </html>
