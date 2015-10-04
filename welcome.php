@@ -25,7 +25,7 @@
                     
                     Your Major: <?php echo $_POST['major']; ?> <br><br>
                     
-                    Visited: <br><?php foreach($_POST['places[]'] as $selected){
+                    Visited: <br><?php foreach($_POST['places'] as $selected){
                         echo $selected . "</br>"; } ?><br><br>
                       Visited: <br><?php echo $_POST['places']; ?><br><br>
                     Comments: <br>
