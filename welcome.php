@@ -19,16 +19,17 @@
                 <h1>Welcome!</h1>
                 
                 <section>
-                    Welcome, <?php echo $_POST['name'];?><br><br>
+                    <strong>Welcome, <?php echo $_POST['name'];?>!</strong><br><br>
                     
-                    Your Email: <?php echo $_POST['email']; ?> <br><br>
+                    <strong>Your Email:</strong> <?php echo $_POST['email']; ?> <br><br>
                     
-                    Your Major: <?php echo $_POST['major']; ?> <br><br>
+                    <strong>Your Major:</strong> <?php echo $_POST['major']; ?> <br><br>
                     
-                    Visited: <br><?php foreach($_POST['places'] as $selected){
+                    <strong>Places Visited:</strong> <br>
+                        <?php foreach($_POST['places'] as $selected){
                         echo $selected . "</br>"; } ?><br><br>
                     
-                    Comments: <br>
+                        <strong>Comments:</strong> <br>
                     <?php echo $_POST['comments']; ?>
                     
                 </section>
