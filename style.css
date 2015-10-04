@@ -96,3 +96,27 @@ p {
 .list0 li {
     line-height: 1.5em;
 }
+
+//bar graph
+.barGraph {
+    border-bottom: 1px solid #FFF;
+    position: relative;
+    }
+    
+.barGraph li {
+    background-color: transparent;
+    border: 1px solid #555;
+    border-left: none;
+    position: relative;
+    text-align: left;
+    height: 2.4em;
+    clear: both;
+    list-style-type: none;
+    padding: 5px;
+    }
+    
+ .barGraph li.1bar { background-color: #8671FD; }
+ .barGraph li.2bar { background-color: #CD65FA; }
+ .barGraph li.3bar { background-color: #FA6565; }
+ .barGraph li.4bar { background-color: #FAAD65; }
+ 

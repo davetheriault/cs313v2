@@ -23,6 +23,7 @@
                     <li><a href="">Week 3</a>
                         <ul>
                             <li><a href="w3tra.php">Team Readiness Activity</a></li>
+                            <li><a href="phpsurvey.php">PHP Survey</a></li>
                         </ul>
                     </li>
                     <li><a href="">Week 4</a></li>
