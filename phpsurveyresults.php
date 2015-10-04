@@ -59,9 +59,9 @@ $lessAvg = round(($numless / $spendSum * 100), 2);
 <?php $title = 'Survey Results'; ?>
 <?php include 'includes/header.php'; ?>
 
-            <div id="mainContain">
+<div id="mainContain"><br>
             <?php if (isset($_SESSION['voted'])){
-                echo 'Your vote has savn submitted. Thank you.';} ?>
+                echo 'Your vote has been submitted. Thank you.';} ?>
             <h1>Results</h1>
             
                 <h2>Best Brand:</h2><br><?php echo $brandsum . ' total votes'; ?><br>
