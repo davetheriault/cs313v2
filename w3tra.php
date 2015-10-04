@@ -39,7 +39,7 @@
                     <input type="checkbox" name="places" value="Antarctica">Antarctica<br>
                     <br>
                     Comments: <br>
-                    <textarea name="comments" form="form1" style="width: 600px;"></textarea>
+                    <textarea name="comments" form="form1" style="width: 600px;"></textarea><br><br>
                     <input type="submit">
                                      
                 </form>
