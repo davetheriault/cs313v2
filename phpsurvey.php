@@ -46,6 +46,7 @@
                 <input type="submit" form="tvform"><br>
                 <br>
                 <a href="phpsurveyresults.php">Skip to results</a>
+                <br><br>
                 </section>
                     
                 
