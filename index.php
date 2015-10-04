@@ -1,20 +1,7 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>CS313 Theriault</title>
-        <link rel="stylesheet" href="style.css" type="text/css">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div id="container">
+<?php $title = 'CS313 Theriault'; ?>
             
-            <div id="header">
-                <div id="headLogo">
-                    <img src="images/dave_theriault_logo.png" alt="Dave Theriault Logo">
-                </div>
-                <div id="headerBox"><div id="headTitle">David Theriault's CS313 Site</div></div>
-            </div>
+            <?php include 'includes/header.php'; ?>
+            
             <div id="mainContain">
             <div id="mainBox">
                 <h1>CS313 Assignments</h1>
