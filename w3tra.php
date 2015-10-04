@@ -1,20 +1,8 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Week 3 Team Readiness Activity</title>
-        <link rel="stylesheet" href="style.css" type="text/css">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div id="container">
-            
-            <div id="header">
-                <div id="headLogo">
-                    <img src="images/dave_theriault_logo.png" alt="Dave Theriault Logo">
-                </div>
-                <div id="headerBox"><div id="headTitle">David Theriault's CS313 Site</div></div>
-            </div>
+<?php $title = 'Week 3 Team Readiness Activity'; ?>
+
+<?php include 'includes/header.php'; ?>
+
+
             <div id="mainContain">
                 <h1>Week 3 Team Readiness Activity</h1>
                     

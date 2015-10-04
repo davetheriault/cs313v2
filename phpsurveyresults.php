@@ -55,23 +55,10 @@ $_700Avg = round(($num700 / $spendSum * 100), 2);
 $moreAvg = round(($nummore / $spendSum * 100), 2);
 $lessAvg = round(($numless / $spendSum * 100), 2);
 ?>
-<html>
-    <head>
-        <title>Results</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="style.css">
 
-    </head>
-    <body>
-        <div id="container">
-            
-            <div id="header">
-                <div id="headLogo">
-                    <img src="images/dave_theriault_logo.png" alt="Dave Theriault Logo">
-                </div>
-                <div id="headerBox"><div id="headTitle">David Theriault's CS313 Site</div></div>
-            </div>
+<?php $title = 'Survey Results'; ?>
+<?php include 'includes/header.php'; ?>
+
             <div id="mainContain">
             <?php if (isset($_SESSION['voted'])){
                 echo 'Your vote has savn submitted. Thank you.';} ?>
@@ -106,7 +93,7 @@ $lessAvg = round(($numless / $spendSum * 100), 2);
                     <?php echo "<li class=\"bar1\" style=\"width: " . $lessAvg*5 . "px;\">&lt;$400<br>" . $lessAvg . "%</li>"; ?>
                     <?php echo "<li class=\"bar2\" style=\"width: " . $_400Avg*5 . "px;\">$400_$700<br>" . $_400Avg . "%</li>"; ?>
                     <?php echo "<li class=\"bar3\" style=\"width: " . $_700Avg*5 . "px;\">$700_$1000<br>" . $_700Avg . "%</li>"; ?>
-                    <?php echo "<li class=\"bar4\" style=\"width: " . $moreAvg*5 . "px;\">&mt;$1000<br>" . $moreAvg . "%</li>"; ?>
+                    <?php echo "<li class=\"bar4\" style=\"width: " . $moreAvg*5 . "px;\">&gt;$1000<br>" . $moreAvg . "%</li>"; ?>
                 </ul>
             
         </div>
