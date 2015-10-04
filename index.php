@@ -27,7 +27,7 @@
                 </ul>
             </div>  
                 <div id="mainBox2">
-                    <a href="endsession.php">Week 0</a>
+                    <a href="endsession.php" style="opacity: .3;">Week 0</a>
                 </div>
             </div>
         </div>
