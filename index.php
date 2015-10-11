@@ -13,7 +13,12 @@
                             <li><a href="phpsurveygate.php">PHP Survey</a></li>
                         </ul>
                     </li>
-                    <li><a href="">Week 4</a></li>
+                    <li><a href="">Week 4</a>
+                        <ul>
+                            <li><a href="w4tra.php">Team Readiness Activity</a></li>
+                            <li><a href="createdb.php">Database Creation</a></li>
+                        </ul>
+                    </li>
                     <li><a href="">Week 5</a></li>
                     <li><a href="">Week 6</a></li>
                     <li><a href="">Week 7</a></li>
