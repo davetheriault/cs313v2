@@ -1,7 +1,7 @@
 <?php $title = 'CS313 Theriault'; ?>
             
             <?php include 'includes/header.php'; ?>
-            
+            <!-- -->
             <div id="mainContain">
             <div id="mainBox">
                 <h1>CS313 Assignments</h1>
