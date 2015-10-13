@@ -21,9 +21,9 @@ require 'includes/dbconnection.php';
                 <form id="searchBook" action="scripture.php" method="post">
                     <input type='radio' name='book' value='john' />John <br>
                     <input type='radio' name='book' value='doctrine and covenants' />Doctrine and Covenants <br>
-                    <input type='radio' name='book' value='mosiah' />Mosiah <br>
+                    <input type='radio' name='book' value='mosiah' />Mosiah <br><br>
 
-                    <input type="submit" value="Submit">
+                    <input type="submit" value="Submit"><br><br>
                 </form>
                 <?php 
                     if (isset($_POST['book'])) {
@@ -34,7 +34,6 @@ require 'includes/dbconnection.php';
                     
                         }
                     }
-                    echo $_POST['book'];
                 ?>
             </div>
         </div>
