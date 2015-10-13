@@ -27,7 +27,7 @@ require 'includes/dbconnection.php';
                 </form>
                 <?php 
                     if (isset($_POST['book'])) {
-                        echo '<p>Scriptures from the book of ' . $_POST['book'] . ':</p><br>';
+                        echo '<p>Scriptures from the book of <span style="text-transform: capitalize;">' . $_POST['book'] . '</span>:</p><br>';
                         foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures WHERE book = "' . $_POST['book'] . '"') as $results){
                             echo '<div class="block"><strong>'. $results['book'] . ' ' . $results['chapter'] . ':' . $results['verse'] . '</strong> - "'
                         . $results['content'] . '"</div><br><br>';
