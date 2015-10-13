@@ -26,8 +26,8 @@ require 'includes/dbconnection.php';
                     if (isset($_POST['book'])) {
                         echo '<p>Scriptures from the book of ' . $_POST['book'] . ':<br>';
                         foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures WHERE book = "' . $_POST['book'] . '"') as $results){
-                            echo '<div class="block"><strong>'. $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</strong> - "'
-                        . $row['content'] . '"</div><br><br>';
+                            echo '<div class="block"><strong>'. $results['book'] . ' ' . $results['chapter'] . ':' . $results['verse'] . '</strong> - "'
+                        . $results['content'] . '"</div><br><br>';
                     
                         }
                     }
