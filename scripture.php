@@ -19,9 +19,9 @@ require 'includes/dbconnection.php';
             <div>
                 Search for scripture by book:
                 <form id="searchBook" action="scripture.php" method="post">
-                    <input type=”radio” name=”book” value=”john” />John <br>
-                    <input type=”radio” name=”book” value=”doctrine and covenants” />Doctrine and Covenants <br>
-                    <input type=”radio” name=”book” value=”mosiah” />Mosiah <br>
+                    <input type='radio' name='book' value='john' />John <br>
+                    <input type='radio' name='book' value='doctrine and covenants' />Doctrine and Covenants <br>
+                    <input type='radio' name='book' value='mosiah' />Mosiah <br>
 
                     <input type="submit" value="Submit">
                 </form>
