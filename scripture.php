@@ -28,8 +28,10 @@ require 'includes/dbconnection.php';
                         foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures WHERE book = "' . $_POST['book'] . '"') as $results){
                             echo '<div class="block"><strong>'. $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</strong> - "'
                         . $row['content'] . '"</div><br><br>';
+                    
                         }
                     }
+                    echo $_POST['book'];
                 ?>
             </div>
         </div>
