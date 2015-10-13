@@ -17,7 +17,7 @@ require 'includes/dbconnection.php';
             }
             ?>
             <div>
-                Search for scripture by book:
+                <h3>Display scriptures by book:</h3>
                 <form id="searchBook" action="scripture.php" method="post">
                     <input type='radio' name='book' value='john' />John <br>
                     <input type='radio' name='book' value='doctrine and covenants' />Doctrine and Covenants <br>
@@ -27,14 +27,14 @@ require 'includes/dbconnection.php';
                 </form>
                 <?php 
                     if (isset($_POST['book'])) {
-                        echo '<p>Scriptures from the book of ' . $_POST['book'] . ':<br>';
+                        echo '<p>Scriptures from the book of ' . $_POST['book'] . ':</p><br>';
                         foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures WHERE book = "' . $_POST['book'] . '"') as $results){
                             echo '<div class="block"><strong>'. $results['book'] . ' ' . $results['chapter'] . ':' . $results['verse'] . '</strong> - "'
                         . $results['content'] . '"</div><br><br>';
                     
                         }
                     }
-                ?>
+                    ?><br><br>
             </div>
         </div>
         </div>
