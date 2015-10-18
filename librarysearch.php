@@ -40,7 +40,7 @@
                                                 . 'Author: '.$result['author'].'<br>'
                                                 . 'Genre: '.$result['genre'].'<br>'
                                                 . 'Status: ';
-                                        if ($result['status'] = 1) { echo 'Available'; }
+                                        if ($result['status'] == '1') { echo 'Available'; }
                                         else { echo 'Unavailable<br>'
                                             . 'Due Back: '.$result['date_due'].''; }
                                         echo '<br></div>';
@@ -52,7 +52,7 @@
                                                 . 'Author: '.$result['author'].'<br>'
                                                 . 'Genre: '.$result['genre'].'<br>'
                                                 . 'Status: ';
-                                        if ($result['status'] = 1) { echo 'Available'; }
+                                        if ($result['status'] == '1') { echo 'Available'; }
                                         else { echo 'Unavailable<br>'
                                             . 'Due Back: '.$result['date_due'].''; }
                                         echo '<br></div>';
@@ -68,7 +68,7 @@
                                             . 'Author: '.$result['author'].'<br>'
                                             . 'Genre: '.$result['genre'].'<br>'
                                             . 'Status: ';
-                                    if ($result['status'] = 1) { echo 'Available'; }
+                                    if ($result['status'] == '1') { echo 'Available'; }
                                     else { echo 'Unavailable<br>'
                                         . 'Due Back: '.$result['date_due'].''; }
                                     echo '<br></div>';
