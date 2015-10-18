@@ -137,5 +137,10 @@ p {
 
 #searchBooks {
     padding: 20px;
-    background-color: #FA6565;
+    background-color: #fcd15e;
+    border-radius: 10px;
+}
+
+#bookSearch {
+    width: 250px;
 }
