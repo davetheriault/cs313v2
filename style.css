@@ -44,6 +44,7 @@ p {
 #headLogo img {
     width: 55px;
     height: 55px;
+    opacity: .6;
 }
 #headerBox {
     display: table;
@@ -137,7 +138,7 @@ p {
 
 #searchBooks {
     padding: 20px;
-    background-color: #fcd15e;
+    background-color: #a3d0fa;
 }
 
 #bookSearch {
