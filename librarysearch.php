@@ -19,15 +19,35 @@
                     </form>
                     
                     <div id="results">
-                    <?php 
-                        if (isset($_GET['browse'])) {
-                            foreach ($db->query('SELECT DISTINCT genre FROM books') as $genre){
-                                echo '<h2><a href="librarysearch.php?genre='.$genre['genre'].'">'
-                                        . $genre['genre'] . '</a></h2>';
+                        <?php 
+                            if (isset($_GET['browse'])) {
+                                foreach ($db->query('SELECT DISTINCT genre FROM books') as $genre){
+                                    echo '<h2><a href="librarysearch.php?genre='.$genre['genre'].'">'
+                                            . $genre['genre'] . '</a></h2>';
+                                }
                             }
-                        }
-                    
-                    ?>
+
+                        ?>
+                        
+                        <?php
+                            if (isset($_GET['bkstring']) & isset($_GET['searchby'])) {
+                                $strng = $_GET['bkstring'];
+                                $srchby = $_GET['searchby'];
+                                
+                                if ($srchby = 'title') {
+                                    foreach ($db->query('SELECT * FROM books WHERE title LIKE "%'.$strng.'%" GROUP BY title') as $result) {
+                                        echo '<div class="result">Title: '.$result['title'].'<br>'
+                                                . 'Author: '.$result['author'].'<br>'
+                                                . 'Genre: '.$result['genre'].'<br>'
+                                                . 'Status: ';
+                                        if ($result['genre'] = 1) { echo 'Available'; }
+                                        else { echo 'Unavailable<br>'
+                                            . 'Due Back: '.$result['date_due'].''; }
+                                        echo '<br></div>';
+                                    }
+                                }
+                            }
+                        ?>
                     </div>
                 </div>  
             </div>
