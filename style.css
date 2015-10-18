@@ -118,3 +118,11 @@ p {
 .barGraph li.bar3 { background-color: #FA6565; }
 .barGraph li.bar4 { background-color: #FAAD65; }
  
+.result {
+    margin: 30px;
+    font-family: sans-serif;
+}
+
+.result:nth-of-type(odd) {
+    background-color: white;
+}
