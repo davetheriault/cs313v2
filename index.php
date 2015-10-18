@@ -22,7 +22,7 @@
                     <li><a href="">Week 5</a>
                         <ul>
                             <li><a href="scripture.php">Team Readiness Activity</a></li>
-                            <li><a href="createdb.php"></a></li>
+                            <li><a href="librarysearch.php">Database Access</a></li>
                         </ul>
                     </li>
                     <li><a href="">Week 6</a></li>
