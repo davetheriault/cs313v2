@@ -67,6 +67,13 @@ p {
     top: calc(45px - 1em);
     right: 20px;
 }
+#headTitle a, #headTitle a:visited {
+    color: green;
+    text-decoration: none;
+}
+#headTitle a:hover {
+    color: gray;
+}
 #mainContain {
     position: relative;
     float: left;
