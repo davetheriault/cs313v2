@@ -59,7 +59,21 @@
                                     }
                                 }
                             }
-                            
+                        ?>
+                        <?php 
+                            if (isset($_GET['genre'])) {
+                                $gnre = $_GET['genre'];
+                                foreach ($db->query('SELECT * FROM books WHERE genre = "'.$gnre.'"') as $result) {
+                                    echo '<div class="result">Title: '.$result['title'].'<br>'
+                                            . 'Author: '.$result['author'].'<br>'
+                                            . 'Genre: '.$result['genre'].'<br>'
+                                            . 'Status: ';
+                                    if ($result['genre'] = 1) { echo 'Available'; }
+                                    else { echo 'Unavailable<br>'
+                                        . 'Due Back: '.$result['date_due'].''; }
+                                    echo '<br></div>';
+                                }
+                            }
                         ?>
                     </div>
                 </div>  
