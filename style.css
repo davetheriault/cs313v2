@@ -119,10 +119,9 @@ p {
 .barGraph li.bar4 { background-color: #FAAD65; }
  
 .result {
-    margin: 30px;
     font-family: "Arial Black", Gadget, sans-serif;
     line-height: 1.5em;
-    padding: 1em;
+    padding: 20px;
 }
 
 .result:nth-of-type(odd) {

@@ -46,7 +46,20 @@
                                         echo '<br></div>';
                                     }
                                 }
+                                if ($srchby = 'author') {
+                                    foreach ($db->query('SELECT * FROM books WHERE author LIKE "%'.$strng.'%" GROUP BY title') as $result) {
+                                        echo '<div class="result">Title: '.$result['title'].'<br>'
+                                                . 'Author: '.$result['author'].'<br>'
+                                                . 'Genre: '.$result['genre'].'<br>'
+                                                . 'Status: ';
+                                        if ($result['genre'] = 1) { echo 'Available'; }
+                                        else { echo 'Unavailable<br>'
+                                            . 'Due Back: '.$result['date_due'].''; }
+                                        echo '<br></div>';
+                                    }
+                                }
                             }
+                            
                         ?>
                     </div>
                 </div>  
