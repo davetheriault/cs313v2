@@ -20,7 +20,7 @@
                     
                     <div id="results">
                     <?php 
-                        if ($_GET['browse'] = 'true') {
+                        if (isset($_GET['browse'])) {
                             foreach ($db->query('SELECT DISTINCT genre FROM books') as $genre){
                                 echo '<h2><a href="librarysearch.php?genre='.$genre['genre'].'">'
                                         . $genre['genre'] . '</a></h2>';
