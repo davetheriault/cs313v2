@@ -9,7 +9,7 @@
                     <h1>Find a Book</h1>
                     
                     <form id="searchBooks" action="librarysearch.php" method="get">
-                        <input name="bkstring" type="text">
+                        <input id="bookSearch" name="bkstring" type="search">
                         <select name="searchby">
                             <option value="title">by Title</option>
                             <option value="author">by Author</option>

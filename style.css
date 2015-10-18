@@ -127,3 +127,8 @@ p {
 .result:nth-of-type(odd) {
     background-color: white;
 }
+
+#searchBooks {
+    padding: 20px;
+    background-color: #FA6565;
+}
