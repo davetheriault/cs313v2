@@ -52,6 +52,8 @@ require 'includes/dbconnection.php';
                             
                             $scripId->setFetchMode(PDO::FETCH_ASSOC);
                             $scripId = $scripId->fetch();
+                            
+                            echo $scripId['id'];
 
                             foreach ($topicId as $topId) { 
                                 $db->exec('INSERT INTO topic_verse_link (topic_id, scripture_id) VALUES (' . $topId . ', ' .$scripId['id']. ' )');
