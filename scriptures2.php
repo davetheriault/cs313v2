@@ -47,6 +47,9 @@ require 'includes/dbconnection.php';
                             $topics = $_POST['topic'];
                             
                             print_r($topics);
+                            
+                            $value = (count($topics) - 1);
+                            $topics[$value] = $_POST['newtopic'];
 
 
                             $db->exec('INSERT INTO scriptures (book, chapter, verse, content) VALUES ("' . $book . '", ' . $chapter.', '.$verse.', "'.$content.'") ') ;
