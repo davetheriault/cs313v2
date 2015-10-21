@@ -41,6 +41,8 @@ require 'includes/dbconnection.php';
                         $content = $_POST['content'];
                         $topics = $_POST['topic'];
                         
+                        
+                        
                         $db->exec('INSERT INTO scriptures (book, chapter, verse, content) VALUES ("' . $book . '", ' . $chapter.', '.$verse.', "'.$content.'") ') ;
 
                         $scripId = $db->query('SELECT id FROM scriptures WHERE book = "' . $book . '" AND chapter = '.$chapter.' AND verse = '.$verse.' ');
@@ -56,7 +58,6 @@ require 'includes/dbconnection.php';
                             }    
                         }
                         
-                        include 'scriptureadd.php';
                         
                         echo "<br>Scripture Inserted";
                         } catch (PDOException $e)    {
@@ -64,6 +65,8 @@ require 'includes/dbconnection.php';
                         }
                         unset($_POST['book']);
                     }
+                    
+                        include 'scriptureadd.php';
                 ?>
 
 
