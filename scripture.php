@@ -3,7 +3,7 @@ require 'includes/dbconnection.php';
 ?>
 
 
-<?php $title = 'CS313 Team Readiness Scriptures'; ?>
+<?php $title = 'CS313 Team Readiness Scriptures 2'; ?>
             
             <?php include 'includes/header.php'; ?>
             
