@@ -14,10 +14,11 @@ require 'includes/dbconnection.php';
             
             <div>
                 <form id="addScripture" action="scriptures2.php" method="post">
-                    Book: <input type="text" name="book" required><br>
-                    Chapter: <input type="number" name="chapter" required=""><br>
-                    Verse Number: <input type="number" name="verse" required=""><br>
-                    Content: <textarea form="addScripture" cols="100" rows="7" name="content" required=""></textarea><br>
+                    Book: <br>
+                    <input type="text" name="book" required><br><br>
+                    Chapter: <br><input type="number" name="chapter" required=""><br><br>
+                    Verse Number: <br><input type="number" name="verse" required=""><br><br>
+                    Content: <br><textarea form="addScripture" cols="100" rows="7" name="content" required=""></textarea><br>
                     Topics: <br>
                     <?php
                     foreach ($db->query('SELECT name FROM topics') as $row){
@@ -51,15 +52,13 @@ require 'includes/dbconnection.php';
                             foreach ($db->query('SELECT id FROM topics WHERE name = "' .$topic. '" ') as $topicId) {
                                 
                                 $tId = (int)$topicId['id'];
-                                echo $tId;
-                                echo '<br>' . $sId . '<br><br>';
                                 $db->exec('INSERT INTO topiclink (topic_id, scripture_id) VALUES ( '.$tId.', '.$sId.' ) ');
                             }    
                         }
                         
                         include 'scriptureadd.php';
                         
-                        echo "<br><br>Scripture Inserted";
+                        echo "<br>Scripture Inserted";
                         } catch (PDOException $e)    {
                                      echo $sql . "<br>" . $e->getMessage();
                         }
