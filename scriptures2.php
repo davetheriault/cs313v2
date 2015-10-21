@@ -26,7 +26,7 @@ require 'includes/dbconnection.php';
             }
                     ?>
                     <input type="checkbox" id="other"><input type="text" name="newtopic" id="nexttop" disabled>
-                    <br>
+                    <br><br>
                     <input type="submit" value="Submit">
              
                 
@@ -73,7 +73,7 @@ require 'includes/dbconnection.php';
 
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>    
             <script>
-                $('#other').click(function() { $('#nexttop').prop('disabled', !$('#other').attr('checked')); ) } ;
+                $('#other').click(function() { $('#nexttop').prop('disabled', false) } ;
             
             </script>
      
