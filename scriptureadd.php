@@ -21,13 +21,13 @@
                             foreach ($db->query('SELECT id FROM topics WHERE name = "' .$topic. '" ') as $topicId) { 
                                 print_r($topicId['id']);
                                 echo "<br>";
-                                $db->exec('INSERT INTO topic_verse_link (topic_id, scripture_id) VALUES (' . $topicId['id'] . ', ' .$scripId['id']. ' )');
+                                $db->exec('INSERT INTO topic_verse_link (topic_id, scripture_id) VALUES (' . $topicId['id'] . ', ' .$scripId['id']. ')');
                             }
                                     
                         }
                         echo "<br><br>Scripture Inserted";
                         } catch (PDOException $e)    {
-                                     echo $sql . "<br>" . $e->getMessage();
+                                     echo $e->getMessage();
                         }
                     }
                 ?>
