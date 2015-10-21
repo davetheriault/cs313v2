@@ -47,13 +47,15 @@ require 'includes/dbconnection.php';
                         $db->exec('INSERT INTO scriptures (book, chapter, verse, content) VALUES ("' . $book . '", ' . $chapter.', '.$verse.', "'.$content.'") ') ;
                         
                         $scripId = $db->query('SELECT id FROM scriptures WHERE book = "' . $book . '" AND chapter = '.$chapter.' AND verse = '.$verse.' ');
-                        foreach ($topics as $topic) { 
-                            $topicId = $db->query('SELECT id FROM topics WHERE name = "' .$topic. '" '); 
-                            
-                            $scripId->setFetchMode(PDO::FETCH_ASSOC);
+                        $scripId->setFetchMode(PDO::FETCH_ASSOC);
                             $scripId = $scripId->fetch();
                             
                             echo $scripId['id'];
+                        
+                        foreach ($topics as $topic) { 
+                            $topicId = $db->query('SELECT id FROM topics WHERE name = "' .$topic. '" '); 
+                            
+                            
 
                             foreach ($topicId as $topId) { 
                                 $db->exec('INSERT INTO topic_verse_link (topic_id, scripture_id) VALUES (' . $topId . ', ' .$scripId['id']. ' )');
