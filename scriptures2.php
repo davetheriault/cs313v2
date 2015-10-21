@@ -50,9 +50,8 @@ require 'includes/dbconnection.php';
                         foreach ($topics as $topic) { 
                             $topicID[] = $db->query('SELECT id FROM topics WHERE name = "' .$topic. '" '); 
                             
+                            echo scripId['id'];
                             
-                            
-                            print_r($scripId->fetchAll());
                         
                             foreach ($topicID as $topId) { 
                                 $db->exec('INSERT INTO topic_verse_link (topic_id, scripture_id) VALUES (' . $topId . ', ' .$scripID['id']. ' )');
