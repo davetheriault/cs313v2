@@ -14,14 +14,14 @@
                         $scripId = $db->query('SELECT id FROM scriptures WHERE book = "' . $book . '" AND chapter = '.$chapter.' AND verse = '.$verse.' ');
                         $scripId->setFetchMode(PDO::FETCH_ASSOC);
                         $scripId = $scripId->fetch();
-                        $sId = $scripId['id'];
+                        $sId = (int)$scripId['id'];
                         
                         foreach ($topics as $topic) { 
                             foreach ($db->query('SELECT id FROM topics WHERE name = "' .$topic. '" ') as $topicId) {
                                 
-                                $tId = $topicId['id'];
+                                $tId = (int)$topicId['id'];
                                       
-                                $db->exec('INSERT INTO topic_verse_link (topic_id, scripture_id) VALUES ('.$tId.', '.$tId.')');
+                                $db->exec('INSERT INTO topic_verse_link (topic_id, scripture_id) VALUES ('.$tId.', '.$sId.')');
                             }    
                         }
                         
