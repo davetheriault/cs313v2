@@ -15,8 +15,16 @@
                         $scripId = $scripId->fetch();
                         
                         foreach ($topics as $topic) { 
-                            foreach ($db->query('SELECT id FROM topics WHERE name = "' .$topic. '" ') as $topicId) { 
-                                $db->exec('INSERT INTO topic_verse_link (topic_id, scripture_id) VALUES ( 5, 6 )');
+                            foreach ($db->query('SELECT id FROM topics WHERE name = "' .$topic. '" ') as $topicId) {
+                                $stmt  = 'INSERT INTO topic_verse_link ';
+                                $stmt .= '(topic_id, scripture_id) ';
+                                $stmt .= 'VALUES (';
+                                $stmt .= $topicId['id'];
+                                $stmt .= ', ';
+                                $stmt .= $scripId['id'];
+                                $stmt .= ')';
+                                        
+                                $db->exec($stmt);
                             }    
                         }
                         
