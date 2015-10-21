@@ -15,7 +15,6 @@
                         $scripId->setFetchMode(PDO::FETCH_ASSOC);
                         $scripId = $scripId->fetch();
                         $sId = $scripId['id'];
-                        echo $scripId['id'];
                         
                         foreach ($topics as $topic) { 
                             foreach ($db->query('SELECT id FROM topics WHERE name = "' .$topic. '" ') as $topicId) {
