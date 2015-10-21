@@ -39,18 +39,14 @@ require 'includes/dbconnection.php';
                         $chapter = (int)$_POST['chapter'];
                         $content = $_POST['content'];
                         $topics = $_POST['topic'];
-                        echo $verse . $book . $chapter . $content . $topics . '<br><br>';
-                        var_dump($verse);
-                        var_dump($book);
-                        var_dump($chapter);
-                        var_dump($content);
+                        
                         $db->exec('INSERT INTO scriptures (book, chapter, verse, content) VALUES ("' . $book . '", ' . $chapter.', '.$verse.', "'.$content.'") ') ;
                         
                         $scripId = $db->query('SELECT id FROM scriptures WHERE book = "' . $book . '" AND chapter = '.$chapter.' AND verse = '.$verse.' ');
                         $scripId->setFetchMode(PDO::FETCH_ASSOC);
                             $scripId = $scripId->fetch();
                             
-                            echo $scripId['id'];
+                         
                         
                         foreach ($topics as $topic) { 
                             foreach ($db->query('SELECT id FROM topics WHERE name = "' .$topic. '" ') as $topicId) { 
@@ -58,12 +54,13 @@ require 'includes/dbconnection.php';
                             }
                                     
                         }
-                        echo "Scripture Inserted";
+                        echo "<br><br>Scripture Inserted";
                         } catch (PDOException $e)    {
                                      echo $sql . "<br>" . $e->getMessage();
                         }
                     }
                 ?>
+                
      
         </div>
         </div>
