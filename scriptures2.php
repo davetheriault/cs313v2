@@ -33,6 +33,7 @@ require 'includes/dbconnection.php';
             <div>
                 <?php 
                     if (isset($_POST['book'])) {
+                        try {
                         $verse = $_POST['verse'];
                         $book = $_POST['book'];
                         $chapter = $_POST['chapter'];
@@ -43,10 +44,16 @@ require 'includes/dbconnection.php';
                         $scripId = $db->query('SELECT id FROM scriptures WHERE book = "' . $book . '" AND chapter = '.$chapter.' AND verse = '.$verse.' ');
                         foreach ($topics as $topic) { 
                             $topicID[] = $db->query('SELECT id FROM topics WHERE name = "' .$topic. '" '); 
+                        
+                            foreach ($topicID as $topId) { 
+                                $db->exec('INSERT INTO topic_verse_link (topic_id, scripture_id) VALUES (' . $topID . ', ' .$scripID. ' )');
+                            }
+                                    
                         }
-                        foreach ($topicID as $topId) { 
-                            $db->exec('INSERT INTO topic_verse_link (topic_id, scripture_id) VALUES (' . $topID . ', ' .$scripID. ' )');
-                        }    
+                        echo "Scripture Inserted";
+                        } catch (PDOException $e)    {
+                                     echo $sql . "<br>" . $e->getMessage();
+                        }
                     }
                 ?>
      
