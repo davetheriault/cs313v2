@@ -15,6 +15,7 @@ require 'includes/dbconnection.php';
                 echo '<div class="block"><strong>'. $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</strong> - "'
                         . $row['content'] . '"</div><br><br>';
             }
+            
             ?>
             <div>
                 <h3>Display scriptures by book:</h3>

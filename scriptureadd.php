@@ -7,12 +7,12 @@
                         $chapter = (int)$_POST['chapter'];
                         $content = $_POST['content'];
                         $topics = $_POST['topic'];
-                        
+                        print_r($topics);
                         $db->exec('INSERT INTO scriptures (book, chapter, verse, content) VALUES ("' . $book . '", ' . $chapter.', '.$verse.', "'.$content.'") ') ;
                         
                         $scripId = $db->query('SELECT id FROM scriptures WHERE book = "' . $book . '" AND chapter = '.$chapter.' AND verse = '.$verse.' ');
                         $scripId->setFetchMode(PDO::FETCH_ASSOC);
-                            $scripId = $scripId->fetch();
+                        $scripId = $scripId->fetch();
                             
                          
                         
