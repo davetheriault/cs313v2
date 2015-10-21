@@ -48,12 +48,13 @@ require 'includes/dbconnection.php';
                         
                         $scripId = $db->query('SELECT id FROM scriptures WHERE book = "' . $book . '" AND chapter = '.$chapter.' AND verse = '.$verse.' ');
                         foreach ($topics as $topic) { 
-                            $topicID = $db->query('SELECT id FROM topics WHERE name = "' .$topic. '" '); 
+                            $topicId = $db->query('SELECT id FROM topics WHERE name = "' .$topic. '" '); 
                             
-                            $scripId = $scripId->fetchAll();
-                        
-                            foreach ($topicID as $topId) { 
-                                $db->exec('INSERT INTO topic_verse_link (topic_id, scripture_id) VALUES (' . $topId . ', ' .$scripID[0]['id']. ' )');
+                            $scripId->setFetchMode(PDO::FETCH_ASSOC);
+                            $scripId = $scripId->fetch();
+
+                            foreach ($topicId as $topId) { 
+                                $db->exec('INSERT INTO topic_verse_link (topic_id, scripture_id) VALUES (' . $topId . ', ' .$scripId['id']. ' )');
                             }
                                     
                         }
