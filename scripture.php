@@ -21,7 +21,7 @@ require 'includes/dbconnection.php';
                     Topics: <br>
                     <?php
                     foreach ($db->query('SELECT name FROM topics') as $row){
-                        echo '<input type="checkbox" name="topic" value="' . $row['name'] . '">' . $row['name'] . '<br>';
+                        echo '<input type="checkbox" name="topic[]" value="' . $row['name'] . '">' . $row['name'] . '<br>';
             }
                     ?>
                     
@@ -33,7 +33,20 @@ require 'includes/dbconnection.php';
             <div>
                 <?php 
                     if (isset($_POST['book'])) {
-                        $db->query('INSERT INTO scriptures (book, chapter, verse, content) VALUES ("'.$_POST['book'].'", "'.$_POST['chapter'].'", "'.$_POST['verse'].'", "'.$_POST['content'].'"') ;
+                        $verse = $_POST['verse'];
+                        $book = $_POST['book'];
+                        $chapter = $_POST['chapter'];
+                        $content = $_POST['content'];
+                        $topics = $_POST['topic'];
+                        $db->query('INSERT INTO scriptures (book, chapter, verse, content) VALUES ("'.$book.'", "'.$chapter.'", "'.$verse.'", "'.$content.'"') ;
+                        
+                        $scripId = $db->query('SELECT id FROM scriptures WHERE book = "' . $book . '" AND chapter = "'.$chapter.'" AND verse = "'.$verse.'" ');
+                        foreach ($topics as $topic) { 
+                            $topicID[] = $db->query('SELECT id FROM topics WHERE name = "' .$topic. '" '); 
+                        }
+                        foreach ($topicID as $topId) { 
+                            $db->query('INSERT INTO topic_verse_link (topic_id, scripture_id) VALUES ("' . $topID . '", "' .$scripID. '" )');
+                        }    
                     }
                 ?>
      
