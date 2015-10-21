@@ -9,33 +9,34 @@ require 'includes/dbconnection.php';
             
             <div id="mainContain">
             <div id="mainBox">
-            <h1>Scripture Resources</h1>
-            <?php 
-            foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $row){
-                echo '<div class="block"><strong>'. $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</strong> - "'
-                        . $row['content'] . '"</div><br><br>';
-            }
-            ?>
+            <h1>Insert New Scripture</h1>
+            
+            
             <div>
-                <h3>Display scriptures by book:</h3>
-                <form id="searchBook" action="scripture.php" method="post">
-                    <input type='radio' name='book' value='john' />John <br>
-                    <input type='radio' name='book' value='doctrine and covenants' />Doctrine and Covenants <br>
-                    <input type='radio' name='book' value='mosiah' />Mosiah <br><br>
-
-                    <input type="submit" value="Submit"><br><br>
+                <form id="addScripture" action="scriptures2.php" method="post">
+                    Book: <input type="text" name="book"><br>
+                    Chapter: <input type="number" name="chapter"><br>
+                    Verse Number: <input type="number" name="verse"><br>
+                    Content: <textarea form="addScripture" cols="100" rows="7"></textarea><br>
+                    Topics: <br>
+                    <?php
+                    foreach ($db->query('SELECT name FROM topics') as $row){
+                        echo '<input type="checkbox" name="topic" value="' . $row['name'] . '">' . $row['name'] . '<br>';
+            }
+                    ?>
+                    
+                    <input type="submit" value="Submit">
+             
+                
                 </form>
+            </div>
+            <div>
                 <?php 
                     if (isset($_POST['book'])) {
-                        echo '<p>Scriptures from the book of <span style="text-transform: capitalize;">' . $_POST['book'] . '</span>:</p><br>';
-                        foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures WHERE book = "' . $_POST['book'] . '"') as $results){
-                            echo '<div class="block"><strong>'. $results['book'] . ' ' . $results['chapter'] . ':' . $results['verse'] . '</strong> - "'
-                        . $results['content'] . '"</div><br><br>';
-                    
-                        }
+                        $db->query('INSERT INTO scriptures (book, chapter, verse, content) VALUES ("'.$_POST['book'].'", "'.$_POST['chapter'].'", "'.$_POST['verse'].'", "'.$_POST['content'].'"') ;
                     }
-                    ?><br><br>
-            </div>
+                ?>
+     
         </div>
         </div>
         
