@@ -21,7 +21,7 @@
                                 
                                 $tId = (int)$topicId['id'];
                                 echo $tId;
-                                echo '<br>' . $sId . '<br>';
+                                echo '<br>' . $sId . '<br><br>';
                                 $db->exec('INSERT INTO topic_verse_link (topic_id, scripture_id) VALUES ('.$tId.', '.$sId.')');
                             }    
                         }
