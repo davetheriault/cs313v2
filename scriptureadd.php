@@ -20,7 +20,8 @@
                             foreach ($db->query('SELECT id FROM topics WHERE name = "' .$topic. '" ') as $topicId) {
                                 
                                 $tId = (int)$topicId['id'];
-                                      
+                                echo $tId;
+                                echo '<br>' . $sId . '<br>';
                                 $db->exec('INSERT INTO topic_verse_link (topic_id, scripture_id) VALUES ('.$tId.', '.$sId.')');
                             }    
                         }
