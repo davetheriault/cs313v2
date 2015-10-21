@@ -25,7 +25,7 @@ require 'includes/dbconnection.php';
                         echo '<input type="checkbox" name="topic[]" value="' . $row['name'] . '">' . $row['name'] . '<br>';
             }
                     ?>
-                    <input type="checkbox" id="other" onchange="document.getElementById('nexttop').disabled=!this.checked;" />
+                    <input type="checkbox" name="topic[]" value="new" id="other" onchange="document.getElementById('nexttop').disabled=!this.checked;" />
                     <input type="text" name="newtopic" id="nexttop" disabled>
                     <br><br>
                     <input type="submit" value="Submit">
@@ -37,15 +37,19 @@ require 'includes/dbconnection.php';
             <?php 
                     if (isset($_POST['book'])) {
                         try {
-                        $verse = (int)$_POST['verse'];
-                        $book = $_POST['book'];
-                        $chapter = (int)$_POST['chapter'];
-                        $content = $_POST['content'];
-                        $topics = $_POST['topic'];
-                        
-                        
-                        
-                        $db->exec('INSERT INTO scriptures (book, chapter, verse, content) VALUES ("' . $book . '", ' . $chapter.', '.$verse.', "'.$content.'") ') ;
+                            if (isset($_POST['newtopic'])) {
+                                $db->exec('INSERT INTO topics (name) VALUES ("'.$_POST['newtopic'].'") ');
+                            }
+                            $verse = (int)$_POST['verse'];
+                            $book = $_POST['book'];
+                            $chapter = (int)$_POST['chapter'];
+                            $content = $_POST['content'];
+                            $topics = $_POST['topic'];
+                            
+                            print_r($topics);
+
+
+                            $db->exec('INSERT INTO scriptures (book, chapter, verse, content) VALUES ("' . $book . '", ' . $chapter.', '.$verse.', "'.$content.'") ') ;
 
                         $scripId = $db->query('SELECT id FROM scriptures WHERE book = "' . $book . '" AND chapter = '.$chapter.' AND verse = '.$verse.' ');
                         $scripId->setFetchMode(PDO::FETCH_ASSOC);
@@ -65,8 +69,10 @@ require 'includes/dbconnection.php';
                         } catch (PDOException $e)    {
                                      echo $sql . "<br>" . $e->getMessage();
                         }
+                        
                         unset($_POST['book']);
                     }
+                    
                     
                         include 'scriptureadd.php';
                 ?>
