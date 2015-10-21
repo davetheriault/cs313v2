@@ -21,7 +21,7 @@ require 'includes/dbconnection.php';
                     Content: <br><textarea form="addScripture" cols="60" rows="7" name="content" required=""></textarea><br><br>
                     Topics: <br>
                     <?php
-                    foreach ($db->query('SELECT name FROM topics') as $row){
+                    foreach ($db->query('SELECT DISTINCT name FROM topics') as $row){
                         echo '<input type="checkbox" name="topic[]" value="' . $row['name'] . '">' . $row['name'] . '<br>';
             }
                     ?>
