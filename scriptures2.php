@@ -21,7 +21,7 @@ require 'includes/dbconnection.php';
                     Topics: <br>
                     <?php 
                     foreach ($db->query('SELECT name FROM topics') as $row){
-                        echo '<input type="checkbox" name="topic" value="' . $row['name'] . '"><br>';
+                        echo '<input type="checkbox" name="topic" value="' . $row['name'] . '">' . $row['name'] . '<br>';
                     } ?>
                     
              
