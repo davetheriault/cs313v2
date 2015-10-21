@@ -39,14 +39,17 @@ require 'includes/dbconnection.php';
                         $chapter = $_POST['chapter'];
                         $content = $_POST['content'];
                         $topics = $_POST['topic'];
-                        $db->exec('INSERT INTO scriptures (book, chapter, verse, content) VALUES ("'.$book.'", '.$chapter.', '.$verse.', "'.$content.'"') ;
+                        echo $verse . $book . $chapter . $content . $topics;
+                        $db->exec('INSERT INTO scriptures (book, chapter, verse, content) VALUES ("' . $book . '", ' . $chapter.', '.$verse.', "'.$content.'"') ;
                         
                         $scripId = $db->query('SELECT id FROM scriptures WHERE book = "' . $book . '" AND chapter = '.$chapter.' AND verse = '.$verse.' ');
                         foreach ($topics as $topic) { 
                             $topicID[] = $db->query('SELECT id FROM topics WHERE name = "' .$topic. '" '); 
                         
+                            echo $scripId . '<br>' . $topicID;
+                        
                             foreach ($topicID as $topId) { 
-                                $db->exec('INSERT INTO topic_verse_link (topic_id, scripture_id) VALUES (' . $topID . ', ' .$scripID. ' )');
+                                $db->exec('INSERT INTO topic_verse_link (topic_id, scripture_id) VALUES (' . $topId . ', ' .$scripID. ' )');
                             }
                                     
                         }
