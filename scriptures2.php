@@ -25,7 +25,7 @@ require 'includes/dbconnection.php';
                         echo '<input type="checkbox" name="topic[]" value="' . $row['name'] . '">' . $row['name'] . '<br>';
             }
                     ?>
-                    
+                    <br>
                     <input type="submit" value="Submit">
              
                 
