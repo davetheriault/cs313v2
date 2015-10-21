@@ -53,7 +53,7 @@ require 'includes/dbconnection.php';
                                 $tId = (int)$topicId['id'];
                                 echo $tId;
                                 echo '<br>' . $sId . '<br><br>';
-                                $db->exec('INSERT INTO topic_verse_link (topic_id, scripture_id) VALUES ( "'.$tId.'", "'.$sId.'" ) ');
+                                $db->exec('INSERT INTO topic_verse_link (topic_id, scripture_id) VALUES ( 2, 8 ) ');
                             }    
                         }
                         
