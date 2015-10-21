@@ -14,10 +14,10 @@ require 'includes/dbconnection.php';
             
             <div>
                 <form id="addScripture" action="scriptures2.php" method="post">
-                    Book: <input type="text" name="book"><br>
-                    Chapter: <input type="number" name="chapter"><br>
-                    Verse Number: <input type="number" name="verse"><br>
-                    Content: <textarea form="addScripture" cols="100" rows="7" name="content"></textarea><br>
+                    Book: <input type="text" name="book" required><br>
+                    Chapter: <input type="number" name="chapter" required=""><br>
+                    Verse Number: <input type="number" name="verse" required=""><br>
+                    Content: <textarea form="addScripture" cols="100" rows="7" name="content" required=""></textarea><br>
                     Topics: <br>
                     <?php
                     foreach ($db->query('SELECT name FROM topics') as $row){
@@ -57,12 +57,13 @@ require 'includes/dbconnection.php';
                             }    
                         }
                         
-                        include 'scripture.php';
+                        include 'scriptureadd.php';
                         
                         echo "<br><br>Scripture Inserted";
                         } catch (PDOException $e)    {
                                      echo $sql . "<br>" . $e->getMessage();
                         }
+                        unset($_POST['book']);
                     }
                 ?>
 
