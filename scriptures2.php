@@ -34,9 +34,9 @@ require 'includes/dbconnection.php';
                 <?php 
                     if (isset($_POST['book'])) {
                         try {
-                        $verse = $_POST['verse'];
+                        $verse = (int)$_POST['verse'];
                         $book = $_POST['book'];
-                        $chapter = $_POST['chapter'];
+                        $chapter = (int)$_POST['chapter'];
                         $content = $_POST['content'];
                         $topics = $_POST['topic'];
                         echo $verse . $book . $chapter . $content . $topics . '<br><br>';
