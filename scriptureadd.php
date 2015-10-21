@@ -1,3 +1,4 @@
+<?php require 'includes/dbconnection.php'; ?>
 <?php 
                     if (isset($_POST['book'])) {
                         try {
