@@ -25,7 +25,8 @@ require 'includes/dbconnection.php';
                         echo '<input type="checkbox" name="topic[]" value="' . $row['name'] . '">' . $row['name'] . '<br>';
             }
                     ?>
-                    <input type="checkbox" id="other"><input type="text" name="newtopic" id="nexttop" disabled>
+                    <input type="checkbox" id="other" onchange="document.getElementById('nexttop').disabled=!this.checked;" />
+                    <input type="text" name="newtopic" id="nexttop" disabled>
                     <br><br>
                     <input type="submit" value="Submit">
              
