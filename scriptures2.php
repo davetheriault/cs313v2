@@ -17,7 +17,7 @@ require 'includes/dbconnection.php';
                     Book: <input type="text" name="book"><br>
                     Chapter: <input type="number" name="chapter"><br>
                     Verse Number: <input type="number" name="verse"><br>
-                    Content: <textarea form="addScripture" cols="100" rows="7"></textarea><br>
+                    Content: <textarea form="addScripture" cols="100" rows="7" name="content"></textarea><br>
                     Topics: <br>
                     <?php
                     foreach ($db->query('SELECT name FROM topics') as $row){
