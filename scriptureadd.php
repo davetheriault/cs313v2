@@ -14,8 +14,13 @@
                         $scripId->setFetchMode(PDO::FETCH_ASSOC);
                         $scripId = $scripId->fetch();
                         
+                        echo $scripId['id'];
+                        
                         foreach ($topics as $topic) { 
                             foreach ($db->query('SELECT id FROM topics WHERE name = "' .$topic. '" ') as $topicId) {
+                                
+                                echo '<br>' . $topicId['id'];
+                                
                                 $stmt  = 'INSERT INTO topic_verse_link ';
                                 $stmt .= '(topic_id, scripture_id) ';
                                 $stmt .= 'VALUES (';
