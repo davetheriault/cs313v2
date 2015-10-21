@@ -14,7 +14,7 @@
                         $scripId->setFetchMode(PDO::FETCH_ASSOC);
                         $scripId = $scripId->fetch();
                             
-                         
+                        echo $scripId['id'] . "<br>";
                         
                         foreach ($topics as $topic) { 
                             echo $topic . "<br>";
