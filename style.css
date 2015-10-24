@@ -156,3 +156,7 @@ p {
     font-family: serif;
     color: blue;
 }
+
+.hide {
+    display: none;
+}

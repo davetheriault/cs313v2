@@ -8,37 +8,14 @@
                 <div id="mainBox">
                     <h1>Library Management</h1>
                     
-                    <h2>Add a book to inventory</h2>
+                    <h2><a href="#" id="addLink">+Add a book to inventory</a></h2>
                     
-                    <form id="addBook" action="addBook.php" method="post">
+                    <form id="addBook" class="hide" action="addBook.php" method="post">
                         Book Title: <br>
                         <input type="text" name="title" id="titleInput"><br><br>
                         
                     </form>
                     
-                    <!-- Button trigger modal -->
-<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  Launch demo modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
                     
                     <form id="searchBooks" action="librarysearch.php" method="get">
                         <input id="bookSearch" name="bkstring" type="search">
@@ -110,6 +87,12 @@
                     </div>
                 </div>  
             </div>
-        </div>
-    </body>
-</html>
+
+<?php require 'includes/footer.php'; ?>
+
+<script>
+    $('#addLink').click(function(){
+        $('#addBook').toggleClass('hide');
+    })
+
+</script>
