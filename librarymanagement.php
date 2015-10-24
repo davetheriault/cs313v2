@@ -59,7 +59,7 @@
                                         echo '<form action="bookEdit.php" method="post">'
                                             . '<button name="book" type="submit" value="'.$result['id'].'">Edit</button></form>';
                                         echo '<form action="bookCheck.php" method="post">'
-                                        . '<button name="book" type="submit" value="'.$result['id'].'">Check Out/In</button></form><br></div>';
+                                        . '<button name="book" type="submit" value="'.$result['id'].'">Check Out/In</button></form></div>';
                                     }
                                 }
                                 if ($srchby = 'author') {
@@ -74,7 +74,7 @@
                                         echo '<form action="bookEdit.php" method="post">'
                                             . '<button name="book" type="submit" value="'.$result['id'].'">Edit</button></form>';
                                         echo '<form action="bookCheck.php" method="post">'
-                                        . '<button name="book" type="submit" value="'.$result['id'].'">Check Out/In</button></form><br></div>';
+                                        . '<button name="book" type="submit" value="'.$result['id'].'">Check Out/In</button></form></div>';
                                     }
                                 }
                             }
@@ -93,7 +93,7 @@
                                     echo '<form action="bookEdit.php" method="post">'
                                             . '<button name="book" type="submit" value="'.$result['id'].'">Edit</button></form>';
                                     echo '<form action="bookCheck.php" method="post">'
-                                    . '<button name="book" type="submit" value="'.$result['id'].'">Check Out/In</button></form><br></div>';
+                                    . '<button name="book" type="submit" value="'.$result['id'].'">Check Out/In</button></form></div>';
                                 }
                             }
                         ?>
