@@ -10,7 +10,7 @@
                     
                     <h3><a href="#" id="addLink">+Add a book to inventory</a></h3>
                     
-                    <form id="addBook" class="hide" action="bookAdd.php" method="post">
+                    <form id="addBook" class="hide" action="bookadd.php" method="post">
                         Book Title: <br>
                         <input type="text" name="title" class="textInput"><br><br>
                         Author: <br>
