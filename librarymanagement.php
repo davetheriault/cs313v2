@@ -17,18 +17,18 @@
                         <input type="text" name="author" class="textInput"><br><br>
                         Genre:<br>
                         <input type="text" name="genre" class="textInput"><br><br>
-                        <input type="submit" value="Submit">
+                        <input type="submit" value="Submit"><br>
                     </form>
                     
                     
-                    <form id="searchBooks" action="librarysearch.php" method="get">
+                    <form id="searchBooks" action="librarymanagement.php" method="get">
                         <input id="bookSearch" name="bkstring" type="search">
                         <select name="searchby">
                             <option value="title">by Title</option>
                             <option value="author">by Author</option>
                         </select>
                         <input type="submit" value="Submit">
-                        <a href="librarysearch.php?browse=true">Browse by Genre</a>
+                        <a href="librarymanagement.php?browse=true">Browse by Genre</a>
                     </form>
                     
                     <div id="results">
