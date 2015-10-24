@@ -35,7 +35,7 @@
                         <?php 
                             if (isset($_GET['browse'])) {
                                 foreach ($db->query('SELECT DISTINCT genre FROM books') as $genre){
-                                    echo '<h2><a href="librarysearch.php?genre='.$genre['genre'].'">'
+                                    echo '<h2><a href="librarymanagement.php?genre='.$genre['genre'].'">'
                                             . $genre['genre'] . '</a></h2>';
                                 }
                             }
@@ -56,8 +56,8 @@
                                         if ($result['status'] == '1') { echo 'Available'; }
                                         else { echo 'Unavailable<br>'
                                             . 'Due Back: '.$result['date_due'].''; }
-                                        echo '<br><form action="bookEdit.php" method="post">'
-                                            . '<button name="book" type="submit" value="'.$result['id'].'">Edit</button></form><br>';
+                                        echo '<form action="bookEdit.php" method="post">'
+                                            . '<button name="book" type="submit" value="'.$result['id'].'">Edit</button></form>';
                                         echo '<form action="bookCheck.php" method="post">'
                                         . '<button name="book" type="submit" value="'.$result['id'].'">Check Out/In</button></form><br></div>';
                                     }
@@ -71,7 +71,7 @@
                                         if ($result['status'] == '1') { echo 'Available'; }
                                         else { echo 'Unavailable<br>'
                                             . 'Due Back: '.$result['date_due'].''; }
-                                        echo '<br><form action="bookEdit.php" method="post">'
+                                        echo '<form action="bookEdit.php" method="post">'
                                             . '<button name="book" type="submit" value="'.$result['id'].'">Edit</button></form>';
                                         echo '<form action="bookCheck.php" method="post">'
                                         . '<button name="book" type="submit" value="'.$result['id'].'">Check Out/In</button></form><br></div>';
@@ -90,7 +90,7 @@
                                     if ($result['status'] == '1') { echo 'Available'; }
                                     else { echo 'Unavailable<br>'
                                         . 'Due Back: '.$result['date_due'].''; }
-                                    echo '<br><form action="bookEdit.php" method="post">'
+                                    echo '<form action="bookEdit.php" method="post">'
                                             . '<button name="book" type="submit" value="'.$result['id'].'">Edit</button></form>';
                                     echo '<form action="bookCheck.php" method="post">'
                                     . '<button name="book" type="submit" value="'.$result['id'].'">Check Out/In</button></form><br></div>';
