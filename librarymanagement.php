@@ -47,7 +47,7 @@
                                 $strng = $_GET['bkstring'];
                                 $srchby = $_GET['searchby'];
                                 
-                                if ($srchby = 'title') {
+                                if ($srchby == 'title') {
                                     foreach ($db->query('SELECT * FROM books WHERE title LIKE "%'.$strng.'%" GROUP BY title') as $result) {
                                         echo '<div class="result">Title: '.$result['title'].'<br>'
                                                 . 'Author: '.$result['author'].'<br>'
@@ -62,7 +62,7 @@
                                         . '<button name="book" type="submit" value="'.$result['id'].'">Check Out/In</button></form></div>';
                                     }
                                 }
-                                if ($srchby = 'author') {
+                                if ($srchby == 'author') {
                                     foreach ($db->query('SELECT * FROM books WHERE author LIKE "%'.$strng.'%" GROUP BY title') as $result) {
                                         echo '<div class="result">Title: '.$result['title'].'<br>'
                                                 . 'Author: '.$result['author'].'<br>'
