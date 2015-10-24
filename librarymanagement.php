@@ -8,12 +8,16 @@
                 <div id="mainBox">
                     <h1>Library Management</h1>
                     
-                    <h2><a href="#" id="addLink">+Add a book to inventory</a></h2>
+                    <h3><a href="#" id="addLink">+Add a book to inventory</a></h3>
                     
-                    <form id="addBook" class="hide" action="addBook.php" method="post">
+                    <form id="addBook" class="hide" action="bookAdd.php" method="post">
                         Book Title: <br>
-                        <input type="text" name="title" id="titleInput"><br><br>
-                        
+                        <input type="text" name="title" class="textInput"><br><br>
+                        Author: <br>
+                        <input type="text" name="author" class="textInput"><br><br>
+                        Genre:<br>
+                        <input type="text" name="genre" class="textInput"><br><br>
+                        <input type="submit" value="Submit">
                     </form>
                     
                     
@@ -52,7 +56,9 @@
                                         if ($result['status'] == '1') { echo 'Available'; }
                                         else { echo 'Unavailable<br>'
                                             . 'Due Back: '.$result['date_due'].''; }
-                                        echo '<br></div>';
+                                        echo '<br></div><form action="bookEdit.php" method="post">'
+                                            . '<button name="book" type="submit" value="'.$result['id'].'">Edit</button></form><br>';
+                                        echo '<form action="bookCheck.php" method="post"><button name="book" type="submit" value="'.$result['id'].'">Check Out/In</button></form><br>';
                                     }
                                 }
                                 if ($srchby = 'author') {
@@ -64,7 +70,9 @@
                                         if ($result['status'] == '1') { echo 'Available'; }
                                         else { echo 'Unavailable<br>'
                                             . 'Due Back: '.$result['date_due'].''; }
-                                        echo '<br></div>';
+                                        echo '<br></div><form action="bookEdit.php" method="post">'
+                                            . '<button name="book" type="submit" value="'.$result['id'].'">Edit</button></form>';
+                                        echo '<form action="bookCheck.php" method="post"><button name="book" type="submit" value="'.$result['id'].'">Check Out/In</button></form><br>';
                                     }
                                 }
                             }
@@ -80,7 +88,9 @@
                                     if ($result['status'] == '1') { echo 'Available'; }
                                     else { echo 'Unavailable<br>'
                                         . 'Due Back: '.$result['date_due'].''; }
-                                    echo '<br></div>';
+                                    echo '<br></div><form action="bookEdit.php" method="post">'
+                                            . '<button name="book" type="submit" value="'.$result['id'].'">Edit</button></form>';
+                                    echo '<form action="bookCheck.php" method="post"><button name="book" type="submit" value="'.$result['id'].'">Check Out/In</button></form><br>';
                                 }
                             }
                         ?>
