@@ -8,6 +8,7 @@
                 <div id="mainBox">
                     <h1>Library Management</h1>
                     
+                    <div class="formbox">
                     <h3><a href="#" id="addLink">+Add a book to inventory</a></h3>
                     
                     <form id="addBook" class="hide" action="bookadd.php" method="post">
@@ -19,7 +20,7 @@
                         <input type="text" name="genre" class="textInput"><br><br>
                         <input type="submit" value="Submit"><br>
                     </form>
-                    
+                    </div>
                     
                     <form id="searchBooks" action="librarymanagement.php" method="get">
                         <input id="bookSearch" name="bkstring" type="search">

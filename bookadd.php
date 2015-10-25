@@ -10,7 +10,28 @@
             . ')');
 ?>
 
-<?php
-    header("Location: librarymanagement.php");
-    exit;
-?>
+<?php $title = 'Confirm'; ?>
+            
+            <?php include 'includes/header.php'; ?>
+            
+            <div id="mainContain">
+                <div id="mainBox">
+                    <h1>Confirmation</h1>
+                    <p>
+                        The following book was added to inventory: <br>
+                        
+                        <?php 
+                            $conf = $db->query('SELECT DISTINCT * FROM books WHERE title = "'.$_POST['title'].'" '
+                                    . 'AND author = "'.$_POST.'" AND genre = "'.$_POST.'"');
+                            echo $conf['title'] . '<br>';
+                            echo $conf['author'] . '<br>';
+                            echo $conf['genre'] . '<br>';
+                            echo $conf['status'] . '<br>';
+                        ?>
+                    </p>
+                    <a href="librarymanagement.php">Return to Management</a>
+                    
+                </div>
+            </div>
+
+<?php include 'includes/footer.php'; ?>

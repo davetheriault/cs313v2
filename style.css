@@ -160,3 +160,9 @@ p {
 .hide {
     display: none;
 }
+
+.formbox {
+    padding: 20px;
+    margin: 5px;
+    background-color: #82FA58;
+}
