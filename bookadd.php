@@ -21,7 +21,7 @@
                         The following book was added to inventory: <br>
                         
                         <?php 
-                            foreach ($db->query('SELECT DISTINCT * FROM books WHERE title = "'.$_POST['title'].'" '
+                            foreach ($db->query('SELECT * FROM books WHERE title = "'.$_POST['title'].'" '
                                     . 'AND author = "'.$_POST.'" AND genre = "'.$_POST.'"') as $conf) {
                             echo $conf['title'] . '<br>';
                             echo $conf['author'] . '<br>';
