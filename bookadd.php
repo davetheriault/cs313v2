@@ -18,20 +18,11 @@
                 <div id="mainBox">
                     <h1>Confirmation</h1>
                     <p>
-                        The following book was added to inventory: <br>
-                        
-                        <?php 
-                            foreach ($db->query('SELECT * FROM books WHERE title = "'.$_POST['title'].'" '
-                                    . 'AND author = "'.$_POST.'" AND genre = "'.$_POST.'"') as $conf) {
-                            echo $conf['title'] . '<br>';
-                            echo $conf['author'] . '<br>';
-                            echo $conf['genre'] . '<br>';
-                            echo $conf['status'] . '<br>';
-                            }
-                        ?>
-                    </p>
-                    <a href="librarymanagement.php">Return to Management</a>
+                        <?php echo $_POST['title']; ?> was added to inventory. <br><br>
+                       
                     
+                        <a href="librarymanagement.php">Return to Management</a>
+                    </p>
                 </div>
             </div>
 
