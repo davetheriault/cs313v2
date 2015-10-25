@@ -13,11 +13,11 @@
                     
                     <form id="addBook" class="hide" action="bookadd.php" method="post">
                         Book Title: <br>
-                        <input type="text" name="title" class="textInput"><br><br>
+                        <input type="text" name="title" class="textInput" required="required"><br><br>
                         Author: <br>
-                        <input type="text" name="author" class="textInput"><br><br>
+                        <input type="text" name="author" class="textInput" required="required"><br><br>
                         Genre:<br>
-                        <input type="text" name="genre" class="textInput"><br><br>
+                        <input type="text" name="genre" class="textInput" required="required"><br><br>
                         <input type="submit" value="Submit"><br>
                     </form>
                     </div>
