@@ -1,14 +1,13 @@
 <?php
     session_start();
-    include 'hashthing.php';
+    include 'includes/hashthing.php';
 ?>
 <?php
             if (isset($_POST['submit']) && isset($_POST['username']) && isset($_POST['password'])) {
                 require 'includes/dbconnection.php';
                 
                 $results = $db->query("SELECT * FROM users WHERE username = '" . $_POST['username'] . "' LIMIT 1");
-       
-                    
+                           
                 if ($results !== false) {
                     $results->setFetchMode(PDO::FETCH_ASSOC);
                     $user = $results->fetch();
