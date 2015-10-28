@@ -30,7 +30,7 @@
                         $_SESSION['logged'] = true;
                         $_SESSION['user']   = $user['user_id'];
                         
-                        header('Location: passwordHomepage.php');
+                        header('Location: passwordhomepage.php');
                         exit();
                     } else {
                         echo "<h1>Username/Password is incorrect!</h1>";
