@@ -22,5 +22,6 @@
             echo $user['username'];
              
         ?>!</h1>
+        <a href="endsession.php" style="opacity: .8;">Sign Out</a>
     </body>
 </html>
