@@ -19,12 +19,10 @@
                         header('Location: passwordhomepage.php');
                         exit();
                     } else {
-                        echo "<h1>Username/Password is incorrect!</h1>";
-                        echo "1<br>";
+                        echo '<h3 style="color: red;">Username/Password is incorrect!</h3>';
                     }
                 } else {
-                    echo "<h1>Username/Password is incorrect!</h1>";
-                    echo "2<br>";
+                    echo '<h3 style="color: red;">Username/Password is incorrect!</h3>';
                 }
             }
         ?>

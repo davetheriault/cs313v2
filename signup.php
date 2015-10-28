@@ -37,20 +37,25 @@
                    
                 $results = $db->query("SELECT * FROM users WHERE user_name = '" . $_POST['username'] . "' LIMIT 1");
                 
-                if ($results !== false && $results->rowCount() === 1) {
+                if ($results !== false ) {
                     echo "<h3>Username is not available.</h3>";
                 } 
                 
                 else if ($_POST['password'] === $_POST['confirm']){
-                    
-                    $hashedpass = password_hash($_POST['password'], PASSWORD_DEFAULT);
-                    
-                    
-                    if ($db->exec('INSERT INTO users (username, password) VALUES ("' . $_POST['username'] . '", "' . $hashedpass . '")')) {
-                    header('Location: signin.php');
-                    exit();
-                    } else {
-                        echo "<h3>Database Error!</h3>";
+                    if( preg_match( '~\d~', $_POST['password']) && (strlen( $_POST['password']) >= 7)){
+                         
+                        $hashedpass = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+
+                        if ($db->exec('INSERT INTO users (username, password) VALUES ("' . $_POST['username'] . '", "' . $hashedpass . '")')) {
+                        header('Location: signin.php');
+                        exit();
+                        } else {
+                            echo "<h3>Database Error!</h3>";
+                        }
+                    }
+                    else {
+                        echo "<h3 style='color:red;'>The password must contain seven or more characters and at least one must be a number.</h3>";
                     }
                 }
                 else { 
