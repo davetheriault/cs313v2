@@ -28,7 +28,7 @@
                     $user = $results->fetch();
                     var_dump($user);
                     
-                if ($results !== false && $results->rowCount() === 1) {
+                if ($results !== false) {
                     $results->setFetchMode(PDO::FETCH_ASSOC);
                     $user = $results->fetch();
                     
