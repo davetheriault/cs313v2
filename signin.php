@@ -26,7 +26,7 @@
                     $results->setFetchMode(PDO::FETCH_ASSOC);
                     $user = $results->fetch();
                     
-                    if (password_verify($_POST['password'], $user['pass_hash'])) {
+                    if (password_verify($_POST['password'], $user['password'])) {
                         $_SESSION['logged'] = true;
                         $_SESSION['user']   = $user['user_id'];
                         
@@ -34,9 +34,11 @@
                         exit();
                     } else {
                         echo "<h1>Username/Password is incorrect!</h1>";
+                        echo "1<br>";
                     }
                 } else {
                     echo "<h1>Username/Password is incorrect!</h1>";
+                    echo "2<br>";
                 }
             }
         ?>
