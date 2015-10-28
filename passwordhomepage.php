@@ -4,12 +4,10 @@
         header('Location: signin.php');
         exit();
     }
+    $title = "Welcome";
+    include 'includes/header.php';
 ?>
-<html>
-    <head>
-        <title>Welcome</title>
-    </head>
-    <body>
+
         <h1>Welcome 
         <?php
             require('includes/dbconnection.php');
@@ -23,5 +21,6 @@
              
         ?>!</h1>
         <a href="endsession.php" style="opacity: .8;">Sign Out</a>
-    </body>
-</html>
+
+        
+        <?php                include 'includes/footer.php'; ?>
