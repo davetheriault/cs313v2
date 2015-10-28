@@ -23,6 +23,11 @@
                 
                 $results = $db->query("SELECT * FROM users WHERE username = '" . $_POST['username'] . "' LIMIT 1");
                 var_dump($results);
+                echo $results->rowCount() . "<br>";
+                $results->setFetchMode(PDO::FETCH_ASSOC);
+                    $user = $results->fetch();
+                    var_dump($user);
+                    
                 if ($results !== false && $results->rowCount() === 1) {
                     $results->setFetchMode(PDO::FETCH_ASSOC);
                     $user = $results->fetch();
