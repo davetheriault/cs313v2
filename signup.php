@@ -1,7 +1,7 @@
 <?php
     session_start();
     require 'includes/dbconnection.php';
-    include 'includes/hashthing.php'
+    include 'includes/hashthing.php';
 ?>
 <html>
     <head>
