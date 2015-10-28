@@ -33,7 +33,7 @@
                     </li>
                     <li><a href="">Week 7</a>
                         <ul>
-                            <li><a href="signup.php">Team Readiness Activity</a></li>
+                            <li><a href="signup.php">Team Readiness Activity (Sign-in/Sign-up)</a></li>
                             <li><a href=""></a></li>
                         </ul>
                     </li>

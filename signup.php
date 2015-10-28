@@ -31,6 +31,8 @@
             
             <input name="submit" type="submit" value="Sign Up" />
         </form>
+        <br>
+        <a href="signin.php">Already have an account?...</a>
         <?php 
             if (isset($_POST['submit']) && isset($_POST['username']) &&
                 isset($_POST['password']) && isset($_POST['confirm'])) {
