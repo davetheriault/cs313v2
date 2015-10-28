@@ -58,6 +58,7 @@
                     echo "<h3 style='color:red;'>Passwords do not match.</h3>"; 
                     
                 }
+                }
         ?>
     </body>
 </html>
