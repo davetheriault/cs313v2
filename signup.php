@@ -5,6 +5,7 @@
     require 'includes/dbconnection.php';
 ?>
 <?php require 'includes/header.php'; ?>
+<?php include 'includes/hashthing.php'; ?>
 
         <h1>Sign Up</h1>
         <form id="signUpForm" method="post" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>">
