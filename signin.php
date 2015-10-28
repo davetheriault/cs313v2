@@ -1,6 +1,7 @@
 <?php
     session_start();
     include 'includes/hashthing.php';
+    $title = "Sign In";
 ?>
 <?php
             if (isset($_POST['submit']) && isset($_POST['username']) && isset($_POST['password'])) {
@@ -26,12 +27,9 @@
                 }
             }
         ?>
-<html>
-    <head>
-        <title>Sign In</title>
-    
-    </head>
-    <body>
+
+<?php require 'includes/header.php'; ?>
+
         <h1>Log In</h1>
         <form name="login" method="post" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>">
             Username: <input type="text" name="username" required/><br />
@@ -42,5 +40,4 @@
         </form>
         <p>Don't have an account? Sign up <a href="signup.php">here!</a></p>
         
-    </body>
-</html>
+<?php                include 'includes/footer.php'; ?>

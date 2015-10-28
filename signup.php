@@ -2,13 +2,9 @@
     session_start();
     require 'includes/dbconnection.php';
     include 'includes/hashthing.php';
+    $title = "Sign Up";
+    include 'includes/header.php';
 ?>
-<html>
-    <head>
-        <title>Sign Up</title>
-    
-    </head>
-    <body>
         <h1>Sign Up</h1>
         <form id="signUpForm" method="post" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>">
             Username: <input type="text" name="username" required/><br />
@@ -67,5 +63,4 @@
                 }
                 }
         ?>
-    </body>
-</html>
+<?php include 'includes/footer.php';
