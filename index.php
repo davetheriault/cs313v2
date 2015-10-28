@@ -28,10 +28,15 @@
                     <li><a href="">Week 6</a>
                         <ul>
                             <li><a href="scriptures2.php">Team Readiness Activity</a></li>
+                            <li><a href="bookadd.php">Add to Database</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Week 7</a>
+                        <ul>
+                            <li><a href="signup.php">Team Readiness Activity</a></li>
                             <li><a href=""></a></li>
                         </ul>
                     </li>
-                    <li><a href="">Week 7</a></li>
                     <li><a href="">Week 8</a></li>
                     <li><a href="">Week 9</a></li>
                     <li><a href="">Week 10</a></li>
