@@ -1,4 +1,3 @@
-// FIRST PAGE (HOMEPAGE)
 <?php
     session_start();
     if (!isset($_SESSION['logged']) || $_SESSION['logged'] !== true || !isset($_SESSION['user'])) {
@@ -6,8 +5,12 @@
         exit();
     }
 ?>
-<?php require_once 'includes/header.php'; ?>
-<h1>Welcome 
+<html>
+    <head>
+        <title>Welcome</title>
+    </head>
+    <body>
+        <h1>Welcome 
         <?php
             require('includes/dbconnection.php');
             
