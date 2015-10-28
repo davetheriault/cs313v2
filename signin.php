@@ -1,5 +1,6 @@
 <?php
     session_start();
+    include 'hashthing.php';
 ?>
 <html>
     <head>
@@ -20,8 +21,8 @@
             if (isset($_POST['submit']) && isset($_POST['username']) && isset($_POST['password'])) {
                 require 'includes/dbconnection.php';
                 
-                $results = $db->query("SELECT * FROM users WHERE user_name = '" . $_POST['username'] . "' LIMIT 1");
-                
+                $results = $db->query("SELECT * FROM users WHERE username = '" . $_POST['username'] . "' LIMIT 1");
+                var_dump($results);
                 if ($results !== false && $results->rowCount() === 1) {
                     $results->setFetchMode(PDO::FETCH_ASSOC);
                     $user = $results->fetch();
