@@ -51,7 +51,7 @@
                         header('Location: signin.php');
                         exit();
                         } else {
-                            echo "<h3>Database Error!</h3>";
+                            echo "<h3>Database error. Username might not be available.</h3>";
                         }
                     }
                     else {
