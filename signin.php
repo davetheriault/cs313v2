@@ -15,7 +15,7 @@
                     
                     if (password_verify($_POST['password'], $user['password'])) {
                         $_SESSION['logged'] = true;
-                        $_SESSION['user']   = $user['user_id'];
+                        $_SESSION['user']   = $user['id'];
                         
                         header('Location: passwordhomepage.php');
                         exit();
