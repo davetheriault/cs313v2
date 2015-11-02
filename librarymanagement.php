@@ -57,9 +57,9 @@
                                         if ($result['status'] == '1') { echo 'Available'; }
                                         else { echo 'Unavailable<br>'
                                             . 'Due Back: '.$result['date_due'].''; }
-                                        echo '<form action="bookEdit.php" method="post">'
+                                        echo '<form action="bookedit.php" method="post">'
                                             . '<button name="book" type="submit" value="'.$result['id'].'">Edit</button></form>';
-                                        echo '<form action="bookCheck.php" method="post">'
+                                        echo '<form action="bookcheck.php" method="post">'
                                         . '<button name="book" type="submit" value="'.$result['id'].'">Check Out/In</button></form></div>';
                                     }
                                 }

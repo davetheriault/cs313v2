@@ -11,7 +11,7 @@
         <div id="container">
             <div id="header">
                 <div id="headLogo">
-                    <img src="images/dave_theriault_logo.png" alt="Dave Theriault Logo">
+                    <a href="index.php"><img src="images/dave_theriault_logo.png" alt="Dave Theriault Logo"></a>
                 </div>
                 <div id="headerBox"><div id="headTitle"><a href="index.php">David Theriault's CS313 Site</a></div></div>
             </div>
