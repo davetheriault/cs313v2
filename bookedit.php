@@ -1,6 +1,12 @@
 <?php require 'includes/library_db_connection.php'; ?>
 <?php $title = 'Edit Book'; ?>
-            
+            <?php 
+                        if (isset($_POST['title']) && isset($_POST['genre'])){
+                            $db->exec('UPDATE books SET title="'.$_POST['title'].'", author="'.$_POST['author'].'",'
+                                    . 'genre="'.$_POST['genre'].'" WHERE id = "'.$_POST['book'].'"');
+                            
+                        }
+                    ?>
             <?php include 'includes/header.php'; ?>
             
             <div id="mainContain">
@@ -16,7 +22,7 @@
                     ?>
                     
                     <form id="addBook" action="bookedit.php" method="post">
-                        <input type="hidden" name="id" value="<?php echo $id; ?>">
+                        <input type="hidden" name="book" value="<?php echo $id; ?>">
                         Book Title: <br>
                         <input type="text" name="title" value="<?php echo $info['title']; ?>" class="textInput" required="required"><br><br>
                         Author: <br>
@@ -31,12 +37,7 @@
                         . '<button name="book" type="submit" value="'.$info['id'].'">Check Out/In</button>'; ?><br>
                         <input type="submit" value="Submit"><br>
                     </form>
-                    <?php 
-                        if (isset($_POST['title'])){
-                            $db->exec('UPDATE books SET title="'.$_POST['title'].'", author="'.$_POST['author'].'",'
-                                    . 'genre="'.$_POST['genre'].'" WHERE id = "'.$_POST['id'].'"');
-                        }
-                    ?>
+                    
 
                 </div>  
                 <div id="mainBox2">
