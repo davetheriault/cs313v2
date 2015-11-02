@@ -12,6 +12,7 @@
                         $book = $db->query('SELECT * FROM books WHERE id = "'.$id.'"');
                         $book->setFetchMode(PDO::FETCH_ASSOC);
                         $info = $book->fetch();
+                        var_dump($info);
                     ?>
                     
                     <form id="addBook" action="bookedit.php" method="post">

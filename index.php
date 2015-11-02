@@ -28,7 +28,7 @@
                     <li><a href="">Week 6</a>
                         <ul>
                             <li><a href="scriptures2.php">Team Readiness Activity</a></li>
-                            <li><a href="bookadd.php">Add to Database</a></li>
+                            <li><a href="librarymanagement.php">Add to Database</a></li>
                         </ul>
                     </li>
                     <li><a href="">Week 7</a>
