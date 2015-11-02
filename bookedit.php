@@ -22,9 +22,9 @@
                         <input type="text" name="author" value="<?php echo $info['author']; ?>" class="textInput" required="required"><br><br>
                         Genre:<br>
                         <input type="text" name="genre" value="<?php echo $info['genre']; ?>" class="textInput" required="required"><br><br>
-                        Availability:<br>
+                        Availability:
                         <?php if ($result['status'] == '1') { echo 'Available'; }
-                                        else { echo 'Unavailable<br>'
+                                        else { echo 'Unavailable<br><br>'
                                             . 'Due Back: '.$info['date_due'].''; } ?><br>
                         <?php echo '<form action="bookcheck.php" method="post">'
                         . '<button name="book" type="submit" value="'.$info['id'].'">Check Out/In</button>'; ?><br>
