@@ -4,7 +4,7 @@
                         if (isset($_POST['title']) && isset($_POST['genre'])){
                             $db->exec('UPDATE books SET title="'.$_POST['title'].'", author="'.$_POST['author'].'",'
                                     . 'genre="'.$_POST['genre'].'" WHERE id = "'.$_POST['book'].'"');
-                            
+                        echo '<script> function function() { alert("Book Updated."); } </script>';
                         }
                     ?>
             <?php include 'includes/header.php'; ?>
