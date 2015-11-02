@@ -166,3 +166,7 @@ p {
     margin: 5px;
     background-color: #82FA58;
 }
+
+.value {
+    font-family: Georgia, serif;
+}

@@ -36,26 +36,26 @@
                                 
                                 if ($srchby = 'title') {
                                     foreach ($db->query('SELECT * FROM books WHERE title LIKE "%'.$strng.'%" GROUP BY title') as $result) {
-                                        echo '<div class="result">Title: '.$result['title'].'<br>'
-                                                . 'Author: '.$result['author'].'<br>'
-                                                . 'Genre: '.$result['genre'].'<br>'
-                                                . 'Status: ';
-                                        if ($result['status'] == '1') { echo 'Available'; }
-                                        else { echo 'Unavailable<br>'
-                                            . 'Due Back: '.$result['date_due'].''; }
-                                        echo '<br></div>';
+                                        echo '<div class="result">Title: <span class="value">'.$result['title'].'</span><br>'
+                                                . 'Author: <span class="value">'.$result['author'].'</span><br>'
+                                                . 'Genre: <span class="value">'.$result['genre'].'</span><br>'
+                                                . 'Status: <span class="value">';
+                                        if ($result['status'] == '1') { echo 'Available</span>'; }
+                                        else { echo 'Unavailable</span><br>'
+                                            . 'Due Back: <span class="value">'.$result['date_due'].''; }
+                                        echo '</span><br></div>';
                                     }
                                 }
                                 if ($srchby = 'author') {
                                     foreach ($db->query('SELECT * FROM books WHERE author LIKE "%'.$strng.'%" GROUP BY title') as $result) {
-                                        echo '<div class="result">Title: '.$result['title'].'<br>'
-                                                . 'Author: '.$result['author'].'<br>'
-                                                . 'Genre: '.$result['genre'].'<br>'
-                                                . 'Status: ';
-                                        if ($result['status'] == '1') { echo 'Available'; }
-                                        else { echo 'Unavailable<br>'
-                                            . 'Due Back: '.$result['date_due'].''; }
-                                        echo '<br></div>';
+                                        echo '<div class="result">Title: <span class="value">'.$result['title'].'</span><br>'
+                                                . 'Author: <span class="value">'.$result['author'].'</span><br>'
+                                                . 'Genre: <span class="value">'.$result['genre'].'</span><br>'
+                                                . 'Status: <span class="value">';
+                                        if ($result['status'] == '1') { echo 'Available</span>'; }
+                                        else { echo 'Unavailable</span><br>'
+                                            . 'Due Back: <span class="value">'.$result['date_due'].''; }
+                                        echo '</span><br></div>';
                                     }
                                 }
                             }
@@ -64,14 +64,14 @@
                             if (isset($_GET['genre'])) {
                                 $gnre = $_GET['genre'];
                                 foreach ($db->query('SELECT * FROM books WHERE genre = "'.$gnre.'"') as $result) {
-                                    echo '<div class="result">Title: '.$result['title'].'<br>'
-                                            . 'Author: '.$result['author'].'<br>'
-                                            . 'Genre: '.$result['genre'].'<br>'
-                                            . 'Status: ';
-                                    if ($result['status'] == '1') { echo 'Available'; }
-                                    else { echo 'Unavailable<br>'
-                                        . 'Due Back: '.$result['date_due'].''; }
-                                    echo '<br></div>';
+                                    echo '<div class="result">Title: <span class="value">'.$result['title'].'</span><br>'
+                                            . 'Author: <span class="value">'.$result['author'].'</span><br>'
+                                            . 'Genre: <span class="value">'.$result['genre'].'</span><br>'
+                                            . 'Status: <span class="value">';
+                                    if ($result['status'] == '1') { echo 'Available</span>'; }
+                                    else { echo 'Unavailable</span><br>'
+                                        . 'Due Back: <span class="value">'.$result['date_due'].''; }
+                                    echo '</span><br></div>';
                                 }
                             }
                         ?>
