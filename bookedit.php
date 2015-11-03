@@ -4,7 +4,6 @@
                         if (isset($_POST['title']) && isset($_POST['genre'])){
                             $db->exec('UPDATE books SET title="'.$_POST['title'].'", author="'.$_POST['author'].'",'
                                     . 'genre="'.$_POST['genre'].'" WHERE id = "'.$_POST['book'].'"');
-                        echo '<script> function function() { alert("Book Updated."); } </script>';
                         }
                     ?>
             <?php include 'includes/header.php'; ?>
@@ -18,7 +17,7 @@
                         $book = $db->query('SELECT * FROM books WHERE id = "'.$id.'"');
                         $book->setFetchMode(PDO::FETCH_ASSOC);
                         $info = $book->fetch();
-                        var_dump($info);
+                        
                     ?>
                     
                     <form id="addBook" action="bookedit.php" method="post">
@@ -38,6 +37,7 @@
                         <input type="submit" value="Submit"><br>
                     </form>
                     
+                    <a href="librarymanagement.php">Return to Management</a>
 
                 </div>  
                 <div id="mainBox2">
