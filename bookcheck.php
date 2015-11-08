@@ -35,7 +35,7 @@
                             }
                             echo '</select><br><input type="submit" value="Check Out"></form>';
                         } else { 
-                            $user = $db->query('SELECT * FROM users WHERE id = "'.$info['user'].'"');
+                            $user = $db->query('SELECT * FROM users WHERE id = "'.$info['user_id'].'"');
                             $user->setFetchMode(PDO::FETCH_ASSOC);
                             $userInfo = $user->fetch();
                             var_dump($userInfo);
