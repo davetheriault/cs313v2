@@ -24,7 +24,7 @@
                     <?php echo $info['title']; ?><br><br>
                     <h3>Availability: </h3>
                     <?php 
-                        if ($result['status'] == 1) { 
+                        if ($info['status'] == 1) { 
                             echo 'Available<br>'
                                . '<form action="bookcheckout.php" method="post">'
                                . 'Check Out To:<select name="user">';
