@@ -11,8 +11,6 @@
     }
 ?>
 
-    <?php echo $due; ?><br>
-    <?php echo $date; ?>
 
-<?php // header('Location: librarymanagement.php'); exit; ?>
+<?php header('Location: librarymanagement.php'); exit; ?>
 

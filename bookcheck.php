@@ -35,10 +35,16 @@
                             }
                             echo '</select><br><input type="submit" value="Check Out"></form>';
                         } else { 
+                            $user = $db->query('SELECT * FROM users WHERE id = "'.$info['user'].'"');
+                            $user->setFetchMode(PDO::FETCH_ASSOC);
+                            $userInfo = $user->fetch();
+                            
                             echo 'Unavailable<br><br>'
                                . 'Due Back: '.$info['date_due'].'<br>'
-                               . '<form action="bookcheck.php" method="post">'
-                               . '<button name="checkin" type="submit" value="'.$info['id'].'">Check In</button>'
+                               . 'Checked Out: '.$info['date_out'].'<br>'
+                                    . 'To: '.$userInfo['first_name'].' '.$userInfo['last_name'].' ('.$userInfo['id'].') <br>'
+                               . '<form action="bookcheckin.php" method="post">'
+                               . '<button name="book" type="submit" value="'.$info['id'].'">Check In</button>'
                                . '</form>'; } ?><br>
                         
                     
