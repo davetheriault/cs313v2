@@ -21,15 +21,16 @@
                     ?>
                     
                     <form id="addBook" action="bookcheck.php" method="post">
-                        <input type="hidden" name="book" value="<?php echo $id; ?>">
+                        
                         Book Title: <br>
                         <?php echo $info['title']; ?><br><br>
                         Availability:
                         <?php 
                         if ($result['status'] == '1') { 
                             echo 'Available<br>'
-                               . '<form action="bookcheck.php" method="post">'
+                               . '<form action="bookcheckout.php" method="post">'
                                . 'Check Out To:<select name="user">';
+                            echo '<input type="hidden" name="book" value="'.$id.'">';
                             foreach ($db->query('SELECT * FROM users ORDER BY last_name ASC, first_name ASC') as $option){
                                 echo '<option value="'.$option['id'].'">'.$option['last_name'].', '.$option['first_name'].'</option>';
                             }
