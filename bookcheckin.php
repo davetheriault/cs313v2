@@ -1,0 +1,7 @@
+<?php
+
+    $db->exec('UPDATE books SET user_id="1", status="1", date_due="0000-00-00", date_out="0000-00-00" WHERE id = "'.$_POST['book'].'"');
+
+    header('Location: librarymanagement.php');
+    exit;
+?>
