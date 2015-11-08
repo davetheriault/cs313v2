@@ -19,14 +19,12 @@
                         $info = $book->fetch();
                         
                     ?>
-                    
-                    <form id="addBook" action="bookcheck.php" method="post">
-                        
+                                            
                         Book Title: <br>
                         <?php echo $info['title']; ?><br><br>
                         Availability:
                         <?php 
-                        if ($result['status'] == '1') { 
+                        if ($result['status'] = '1') { 
                             echo 'Available<br>'
                                . '<form action="bookcheckout.php" method="post">'
                                . 'Check Out To:<select name="user">';
@@ -42,7 +40,7 @@
                                . '<button name="checkin" type="submit" value="'.$info['id'].'">Check In</button>'
                                . '</form>'; } ?><br>
                         
-                    </form>
+                    
                     
                     <h4><a href="librarymanagement.php">Return to Management</a></h4>
 
