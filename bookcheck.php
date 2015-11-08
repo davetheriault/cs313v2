@@ -38,8 +38,7 @@
                             $user = $db->query('SELECT * FROM users WHERE id = "'.$info['user_id'].'"');
                             $user->setFetchMode(PDO::FETCH_ASSOC);
                             $userInfo = $user->fetch();
-                            var_dump($userInfo);
-                            
+                                                        
                             echo 'Unavailable<br><br>'
                                . 'Due Back: '.$info['date_due'].'<br>'
                                . 'Checked Out: '.$info['date_out'].'<br>'
