@@ -26,9 +26,10 @@
                     <?php 
                         if ($info['status'] == 1) { 
                             echo 'Available<br>'
-                               . '<form action="bookcheckout.php" method="post">'
-                               . 'Check Out To:<select name="user">';
-                            echo '<input type="hidden" name="book" value="'.$id.'">';
+                               . '<form action="bookcheckout.php" method="post">';
+                               
+                            echo '<input type="hidden" name="book" value="'.$id.'">'
+                                    . '<h3>Check Out To:</h3><select name="user">';
                             foreach ($db->query('SELECT * FROM users ORDER BY last_name ASC, first_name ASC') as $option){
                                 echo '<option value="'.$option['id'].'">'.$option['last_name'].', '.$option['first_name'].'</option>';
                             }
