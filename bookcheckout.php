@@ -11,5 +11,5 @@
     }
 ?>
 
-<?php header('Location: librarymanagement.php'); ?>
+<?php header('Location: librarymanagement.php'); exit; ?>
 
