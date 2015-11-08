@@ -31,9 +31,9 @@
                         Availability:
                         <?php if ($result['status'] == '1') { echo 'Available'; }
                                         else { echo 'Unavailable<br><br>'
-                                            . 'Due Back: '.$info['date_due'].''; } ?><br>
+                                            . 'Due Back: '.$info['date_due'].''; } ?><br><br>
                         <?php echo '<form action="bookcheck.php" method="post">'
-                        . '<button name="book" type="submit" value="'.$info['id'].'">Check Out/In</button>'; ?><br>
+                        . '<button name="book" type="submit" value="'.$info['id'].'">Check Out/In</button>'; ?><br><br>
                         <input type="submit" value="Submit"><br>
                     </form>
                     
