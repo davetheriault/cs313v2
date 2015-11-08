@@ -20,10 +20,10 @@
                         
                     ?>
                                             
-                        Book Title: <br>
-                        <?php echo $info['title']; ?><br><br>
-                        Availability:
-                        <?php 
+                    <h3>Book Title: </h3>
+                    <?php echo $info['title']; ?><br><br>
+                    <h3>Availability: </h3>
+                    <?php 
                         if ($result['status'] == 1) { 
                             echo 'Available<br>'
                                . '<form action="bookcheckout.php" method="post">'
